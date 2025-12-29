@@ -176,7 +176,7 @@ export const PartnershipPage = () => {
                         className='text-center mb-16'
                     >
                         <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-                            Partner with <span className='text-[var(--color-tedx-red)]'>Us</span>
+                            Partner with <span className='text-(--color-tedx-red)'>Us</span>
                         </h1>
                         <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                             Join us in spreading ideas worth spreading. Partner with TEDxNITSilchar 2026 and connect
@@ -205,8 +205,8 @@ export const PartnershipPage = () => {
                                         transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                                         className='text-center'
                                     >
-                                        <div className='w-16 h-16 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                                            <IconComponent className='w-8 h-8 text-[var(--color-tedx-red)]' />
+                                        <div className='w-16 h-16 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+                                            <IconComponent className='w-8 h-8 text-(--color-tedx-red)' />
                                         </div>
                                         <h3 className='text-xl font-bold text-white mb-3'>{benefit.title}</h3>
                                         <p className='text-gray-300'>{benefit.description}</p>
@@ -234,13 +234,13 @@ export const PartnershipPage = () => {
                                     whileHover={{ scale: 1.05 }}
                                     className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 ${
                                         selectedTier === tier.id
-                                            ? 'ring-2 ring-[var(--color-tedx-red)] bg-gray-800'
+                                            ? 'ring-2 ring-(--color-tedx-red) bg-gray-800'
                                             : 'bg-gray-900 hover:bg-gray-800'
-                                    } ${tier.popular ? 'border-2 border-[var(--color-tedx-red)]/50' : ''}`}
+                                    } ${tier.popular ? 'border-2 border-(--color-tedx-red)/50' : ''}`}
                                     onClick={() => setSelectedTier(tier.id)}
                                 >
                                     {tier.popular && (
-                                        <div className='absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[var(--color-tedx-red)] text-white px-4 py-1 rounded-full text-sm font-semibold'>
+                                        <div className='absolute -top-3 left-1/2 transform -translate-x-1/2 bg-(--color-tedx-red) text-white px-4 py-1 rounded-full text-sm font-semibold'>
                                             Most Popular
                                         </div>
                                     )}
@@ -249,7 +249,7 @@ export const PartnershipPage = () => {
 
                                     <div className='text-center mb-6'>
                                         <h3 className='text-xl font-bold text-white mb-2'>{tier.name}</h3>
-                                        <div className='text-2xl font-bold text-[var(--color-tedx-red)]'>
+                                        <div className='text-2xl font-bold text-(--color-tedx-red)'>
                                             {tier.price}
                                         </div>
                                     </div>
@@ -260,7 +260,7 @@ export const PartnershipPage = () => {
                                                 key={featureIndex}
                                                 className='flex items-start gap-3 text-gray-300'
                                             >
-                                                <div className='w-2 h-2 bg-[var(--color-tedx-red)] rounded-full mt-2 flex-shrink-0' />
+                                                <div className='w-2 h-2 bg-(--color-tedx-red) rounded-full mt-2 flex-shrink-0' />
                                                 <span className='text-sm'>{feature}</span>
                                             </li>
                                         ))}
@@ -286,7 +286,7 @@ export const PartnershipPage = () => {
                             >
                                 {/* Company Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Company Information
                                     </h3>
 
@@ -302,7 +302,7 @@ export const PartnershipPage = () => {
                                                 required
                                                 value={formData.companyName}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Your company name'
                                             />
                                         </div>
@@ -317,7 +317,7 @@ export const PartnershipPage = () => {
                                                 name='website'
                                                 value={formData.website}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='https://your-company.com'
                                             />
                                         </div>
@@ -332,7 +332,7 @@ export const PartnershipPage = () => {
                                                 name='industry'
                                                 value={formData.industry}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select industry</option>
                                                 <option value='technology'>Technology</option>
@@ -355,7 +355,7 @@ export const PartnershipPage = () => {
                                                 name='companySize'
                                                 value={formData.companySize}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select size</option>
                                                 <option value='startup'>Startup (1-50)</option>
@@ -369,7 +369,7 @@ export const PartnershipPage = () => {
 
                                 {/* Contact Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Contact Information
                                     </h3>
 
@@ -385,7 +385,7 @@ export const PartnershipPage = () => {
                                                 required
                                                 value={formData.contactName}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Your full name'
                                             />
                                         </div>
@@ -401,7 +401,7 @@ export const PartnershipPage = () => {
                                                 required
                                                 value={formData.email}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='your.email@company.com'
                                             />
                                         </div>
@@ -417,7 +417,7 @@ export const PartnershipPage = () => {
                                             name='phone'
                                             value={formData.phone}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='+91 9999999999'
                                         />
                                     </div>
@@ -425,7 +425,7 @@ export const PartnershipPage = () => {
 
                                 {/* Partnership Details */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Partnership Details
                                     </h3>
 
@@ -434,7 +434,7 @@ export const PartnershipPage = () => {
                                             <h4 className='text-white font-semibold mb-2'>
                                                 Selected Partnership Tier:
                                             </h4>
-                                            <span className='bg-[var(--color-tedx-red)] text-white px-3 py-1 rounded-full text-sm'>
+                                            <span className='bg-(--color-tedx-red) text-white px-3 py-1 rounded-full text-sm'>
                                                 {partnershipTiers.find(tier => tier.id === selectedTier)?.name}
                                             </span>
                                         </div>
@@ -450,7 +450,7 @@ export const PartnershipPage = () => {
                                                 name='budget'
                                                 value={formData.budget}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select budget range</option>
                                                 <option value='under-50k'>Under ₹50,000</option>
@@ -470,7 +470,7 @@ export const PartnershipPage = () => {
                                                 name='timeline'
                                                 value={formData.timeline}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select timeline</option>
                                                 <option value='immediate'>Immediate (within 1 week)</option>
@@ -490,7 +490,7 @@ export const PartnershipPage = () => {
                                             value={formData.interests}
                                             onChange={handleInputChange}
                                             rows={3}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='What specific benefits or opportunities are you most interested in?'
                                         />
                                     </div>
@@ -505,7 +505,7 @@ export const PartnershipPage = () => {
                                             value={formData.message}
                                             onChange={handleInputChange}
                                             rows={4}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Tell us more about your company and why you want to partner with TEDxNITSilchar...'
                                         />
                                     </div>

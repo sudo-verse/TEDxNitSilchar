@@ -121,7 +121,7 @@ export const SpeakerNominationPage = () => {
                         className='text-center mb-16'
                     >
                         <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-                            Nominate a <span className='text-[var(--color-tedx-red)]'>Speaker</span>
+                            Nominate a <span className='text-(--color-tedx-red)'>Speaker</span>
                         </h1>
                         <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
                             Do you know someone with ideas worth spreading? Help us find exceptional speakers who can
@@ -146,8 +146,8 @@ export const SpeakerNominationPage = () => {
                                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                                     className='bg-gray-900 p-6 rounded-xl'
                                 >
-                                    <div className='w-12 h-12 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mb-4'>
-                                        <CheckCircle className='w-6 h-6 text-[var(--color-tedx-red)]' />
+                                    <div className='w-12 h-12 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mb-4'>
+                                        <CheckCircle className='w-6 h-6 text-(--color-tedx-red)' />
                                     </div>
                                     <h3 className='text-lg font-bold text-white mb-2'>{criteria.title}</h3>
                                     <p className='text-gray-300 text-sm'>{criteria.description}</p>
@@ -172,7 +172,7 @@ export const SpeakerNominationPage = () => {
                             >
                                 {/* Speaker Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Speaker Information
                                     </h3>
 
@@ -188,7 +188,7 @@ export const SpeakerNominationPage = () => {
                                                 required
                                                 value={formData.speakerName}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder="Enter speaker's full name"
                                             />
                                         </div>
@@ -203,7 +203,7 @@ export const SpeakerNominationPage = () => {
                                                 name='speakerEmail'
                                                 value={formData.speakerEmail}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder="Speaker's email address"
                                             />
                                         </div>
@@ -220,7 +220,7 @@ export const SpeakerNominationPage = () => {
                                                 name='speakerPhone'
                                                 value={formData.speakerPhone}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder="Speaker's phone number"
                                             />
                                         </div>
@@ -235,7 +235,7 @@ export const SpeakerNominationPage = () => {
                                                 name='speakerWebsite'
                                                 value={formData.speakerWebsite}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder="Speaker's website or LinkedIn profile"
                                             />
                                         </div>
@@ -251,7 +251,7 @@ export const SpeakerNominationPage = () => {
                                             value={formData.speakerBio}
                                             onChange={handleInputChange}
                                             rows={4}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Brief biography of the speaker including their background, expertise, and current role...'
                                         />
                                     </div>
@@ -267,7 +267,7 @@ export const SpeakerNominationPage = () => {
                                             value={formData.speakerAchievements}
                                             onChange={handleInputChange}
                                             rows={3}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder="List the speaker's notable achievements, awards, publications, or recognition..."
                                         />
                                     </div>
@@ -275,7 +275,7 @@ export const SpeakerNominationPage = () => {
 
                                 {/* Talk Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Talk Information
                                     </h3>
 
@@ -290,7 +290,7 @@ export const SpeakerNominationPage = () => {
                                             required
                                             value={formData.talkTitle}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Title of the proposed talk'
                                         />
                                     </div>
@@ -305,7 +305,7 @@ export const SpeakerNominationPage = () => {
                                             value={formData.talkDescription}
                                             onChange={handleInputChange}
                                             rows={5}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Describe what the talk will be about, key points to be covered, and main takeaways for the audience...'
                                         />
                                     </div>
@@ -319,7 +319,7 @@ export const SpeakerNominationPage = () => {
                                                 name='talkDuration'
                                                 value={formData.talkDuration}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select duration</option>
                                                 <option value='10-12-minutes'>10-12 minutes</option>
@@ -341,7 +341,7 @@ export const SpeakerNominationPage = () => {
                                             value={formData.talkRelevance}
                                             onChange={handleInputChange}
                                             rows={4}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='How does this talk relate to our theme "Turning Lessons into Legacies"? What lessons or legacies will be shared?'
                                         />
                                     </div>
@@ -349,7 +349,7 @@ export const SpeakerNominationPage = () => {
 
                                 {/* Nominator Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Your Information
                                     </h3>
 
@@ -365,7 +365,7 @@ export const SpeakerNominationPage = () => {
                                                 required
                                                 value={formData.nominatorName}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Your full name'
                                             />
                                         </div>
@@ -381,7 +381,7 @@ export const SpeakerNominationPage = () => {
                                                 required
                                                 value={formData.nominatorEmail}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Your email address'
                                             />
                                         </div>
@@ -398,7 +398,7 @@ export const SpeakerNominationPage = () => {
                                                 name='nominatorPhone'
                                                 value={formData.nominatorPhone}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Your phone number'
                                             />
                                         </div>
@@ -412,7 +412,7 @@ export const SpeakerNominationPage = () => {
                                                 required
                                                 value={formData.nominatorRelation}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select relation</option>
                                                 <option value='colleague'>Colleague</option>
@@ -428,7 +428,7 @@ export const SpeakerNominationPage = () => {
 
                                 {/* Additional Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Additional Information
                                     </h3>
 
@@ -441,7 +441,7 @@ export const SpeakerNominationPage = () => {
                                             value={formData.previousTalks}
                                             onChange={handleInputChange}
                                             rows={3}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='List any previous speaking engagements, conferences, or public talks the speaker has given...'
                                         />
                                     </div>
@@ -455,7 +455,7 @@ export const SpeakerNominationPage = () => {
                                             value={formData.additionalInfo}
                                             onChange={handleInputChange}
                                             rows={4}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder="Any additional information you'd like to share about the speaker or the proposed talk..."
                                         />
                                     </div>

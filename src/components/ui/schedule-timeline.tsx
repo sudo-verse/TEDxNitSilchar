@@ -26,7 +26,7 @@ const getSessionIcon = (type: ScheduleSession['type']) => {
 const getSessionColor = (type: ScheduleSession['type']) => {
     switch (type) {
         case 'talk':
-            return 'bg-[var(--color-tedx-red)] text-white';
+            return 'bg-(--color-tedx-red) text-white';
         case 'break':
             return 'bg-blue-500 text-white';
         case 'networking':
@@ -42,7 +42,7 @@ export const ScheduleTimeline = ({ sessions, categoryName, inView }: ScheduleTim
     return (
         <div className='space-y-6'>
             <h3 className='text-2xl font-bold text-white flex items-center gap-3'>
-                <div className='w-3 h-8 bg-[var(--color-tedx-red)] rounded' />
+                <div className='w-3 h-8 bg-(--color-tedx-red) rounded' />
                 {categoryName}
             </h3>
 
@@ -84,7 +84,7 @@ export const ScheduleTimeline = ({ sessions, categoryName, inView }: ScheduleTim
                                         className={cn(
                                             'px-2 py-1 text-xs font-medium rounded-full',
                                             session.type === 'talk'
-                                                ? 'bg-[var(--color-tedx-red)]/10 text-[var(--color-tedx-red)]'
+                                                ? 'bg-(--color-tedx-red)/10 text-(--color-tedx-red)'
                                                 : session.type === 'break'
                                                   ? 'bg-blue-100 text-blue-800'
                                                   : session.type === 'networking'
@@ -97,7 +97,7 @@ export const ScheduleTimeline = ({ sessions, categoryName, inView }: ScheduleTim
                                 </div>
 
                                 {session.speaker && (
-                                    <p className='text-[var(--color-tedx-red)] font-medium'>{session.speaker}</p>
+                                    <p className='text-(--color-tedx-red) font-medium'>{session.speaker}</p>
                                 )}
 
                                 <p className='text-gray-300'>{session.description}</p>

@@ -27,10 +27,10 @@ export const PartnersSection = () => {
                         <div className='space-y-6'>
                             <div className='space-y-4'>
                                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                                    Our <span className='text-[var(--color-tedx-red)]'>Partners</span>
+                                    Our <span className='text-(--color-tedx-red)'>Partners</span>
                                 </h2>
 
-                                <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto' />
+                                <div className='w-24 h-1 bg-(--color-tedx-red) mx-auto' />
                             </div>
 
                             <p className='text-xl text-gray-300 leading-relaxed'>
@@ -74,10 +74,10 @@ export const PartnersSection = () => {
                         transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
                         className='mt-20'
                     >
-                        <div className='bg-gradient-to-r from-gray-800 to-[var(--color-tedx-red)]/10 rounded-2xl p-8 md:p-12 text-center'>
+                        <div className='bg-gradient-to-r from-gray-800 to-(--color-tedx-red)/10 rounded-2xl p-8 md:p-12 text-center'>
                             <div className='max-w-4xl mx-auto space-y-6'>
-                                <div className='w-16 h-16 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mx-auto'>
-                                    <Handshake className='w-8 h-8 text-[var(--color-tedx-red)]' />
+                                <div className='w-16 h-16 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mx-auto'>
+                                    <Handshake className='w-8 h-8 text-(--color-tedx-red)' />
                                 </div>
 
                                 <h3 className='text-3xl md:text-4xl font-bold text-white'>Partner with Us</h3>
@@ -92,7 +92,7 @@ export const PartnersSection = () => {
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         onClick={() => window.open('#partnership-deck', '_blank')}
-                                        className='inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-tedx-red)] text-white rounded-lg hover:bg-[var(--color-tedx-red)]/90 transition-colors font-semibold'
+                                        className='inline-flex items-center gap-2 px-8 py-3 bg-(--color-tedx-red) text-white rounded-lg hover:bg-(--color-tedx-red)/90 transition-colors font-semibold'
                                     >
                                         <Download className='w-5 h-5' />
                                         Download Partnership Deck
@@ -102,7 +102,7 @@ export const PartnersSection = () => {
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         onClick={() => window.open('#become-partner', '_blank')}
-                                        className='px-8 py-3 border-2 border-[var(--color-tedx-red)] text-[var(--color-tedx-red)] rounded-lg hover:bg-[var(--color-tedx-red)] hover:text-white transition-colors font-semibold'
+                                        className='px-8 py-3 border-2 border-(--color-tedx-red) text-(--color-tedx-red) rounded-lg hover:bg-(--color-tedx-red) hover:text-white transition-colors font-semibold'
                                     >
                                         Become a Partner
                                     </motion.button>

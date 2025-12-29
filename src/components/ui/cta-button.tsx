@@ -28,9 +28,9 @@ export const CTAButton = ({
     const baseClasses = 'font-semibold transition-all duration-300 transform hover:scale-105 focus:scale-105';
 
     const variantClasses = {
-        primary: 'bg-[var(--color-tedx-red)] hover:bg-[var(--color-tedx-red)]/90 text-white border-0',
+        primary: 'bg-(--color-tedx-red) hover:bg-(--color-tedx-red)/90 text-white border-0',
         secondary:
-            'bg-transparent border-2 border-[var(--color-tedx-red)] text-[var(--color-tedx-red)] hover:bg-[var(--color-tedx-red)] hover:text-white'
+            'bg-transparent border-2 border-(--color-tedx-red) text-(--color-tedx-red) hover:bg-(--color-tedx-red) hover:text-white'
     };
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {

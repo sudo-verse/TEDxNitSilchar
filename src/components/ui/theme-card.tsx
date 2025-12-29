@@ -24,11 +24,11 @@ export const ThemeCard = ({ title, description, icon: Icon, index, inView }: The
             }}
         >
             <CardContent className='p-6 md:p-8 text-center space-y-4'>
-                <div className='w-14 h-14 md:w-16 md:h-16 mx-auto bg-gradient-to-br from-[var(--color-tedx-red)]/10 to-[var(--color-tedx-red)]/20 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200'>
-                    <Icon className='w-7 h-7 md:w-8 md:h-8 text-[var(--color-tedx-red)]' />
+                <div className='w-14 h-14 md:w-16 md:h-16 mx-auto bg-gradient-to-br from-(--color-tedx-red)/10 to-(--color-tedx-red)/20 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200'>
+                    <Icon className='w-7 h-7 md:w-8 md:h-8 text-(--color-tedx-red)' />
                 </div>
 
-                <h3 className='text-lg md:text-xl font-bold text-white group-hover:text-[var(--color-tedx-red)] transition-colors duration-200'>
+                <h3 className='text-lg md:text-xl font-bold text-white group-hover:text-(--color-tedx-red) transition-colors duration-200'>
                     {title}
                 </h3>
 

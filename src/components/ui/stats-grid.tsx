@@ -33,7 +33,7 @@ export const StatsGrid = ({ stats }: StatsGridProps) => {
                     style={{ transitionDelay: `${index * 100}ms` }}
                 >
                     <div className='space-y-2'>
-                        <div className='text-4xl md:text-5xl font-bold text-[var(--color-tedx-red)]'>
+                        <div className='text-4xl md:text-5xl font-bold text-(--color-tedx-red)'>
                             {stat.value}
                             {stat.suffix}
                         </div>

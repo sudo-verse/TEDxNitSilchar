@@ -72,9 +72,9 @@ export const Navbar = () => {
                         <Link
                             to='/'
                             className={cn(
-                                'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
                                 location.pathname === '/'
-                                    ? 'text-[var(--color-tedx-red)]'
+                                    ? 'text-(--color-tedx-red)'
                                     : isScrolled
                                       ? 'text-muted-foreground'
                                       : 'text-white'
@@ -89,9 +89,9 @@ export const Navbar = () => {
                                 <button
                                     onClick={() => handleNavClick('about')}
                                     className={cn(
-                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                        'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
                                         activeSection === 'about'
-                                            ? 'text-[var(--color-tedx-red)]'
+                                            ? 'text-(--color-tedx-red)'
                                             : isScrolled
                                               ? 'text-muted-foreground'
                                               : 'text-white'
@@ -102,9 +102,9 @@ export const Navbar = () => {
                                 <button
                                     onClick={() => handleNavClick('theme')}
                                     className={cn(
-                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                        'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
                                         activeSection === 'theme'
-                                            ? 'text-[var(--color-tedx-red)]'
+                                            ? 'text-(--color-tedx-red)'
                                             : isScrolled
                                               ? 'text-muted-foreground'
                                               : 'text-white'
@@ -121,9 +121,9 @@ export const Navbar = () => {
                                 key={item.path}
                                 to={item.path}
                                 className={cn(
-                                    'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                    'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
                                     location.pathname === item.path
-                                        ? 'text-[var(--color-tedx-red)]'
+                                        ? 'text-(--color-tedx-red)'
                                         : isScrolled
                                           ? 'text-muted-foreground'
                                           : 'text-white'
@@ -166,8 +166,8 @@ export const Navbar = () => {
                                 to='/'
                                 onClick={() => setIsOpen(false)}
                                 className={cn(
-                                    'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
-                                    location.pathname === '/' && 'text-[var(--color-tedx-red)] bg-muted'
+                                    'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
+                                    location.pathname === '/' && 'text-(--color-tedx-red) bg-muted'
                                 )}
                             >
                                 Home
@@ -179,8 +179,8 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => handleNavClick('about')}
                                         className={cn(
-                                            'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
-                                            activeSection === 'about' && 'text-[var(--color-tedx-red)] bg-muted'
+                                            'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
+                                            activeSection === 'about' && 'text-(--color-tedx-red) bg-muted'
                                         )}
                                     >
                                         About
@@ -188,8 +188,8 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => handleNavClick('theme')}
                                         className={cn(
-                                            'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
-                                            activeSection === 'theme' && 'text-[var(--color-tedx-red)] bg-muted'
+                                            'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
+                                            activeSection === 'theme' && 'text-(--color-tedx-red) bg-muted'
                                         )}
                                     >
                                         Theme
@@ -204,8 +204,8 @@ export const Navbar = () => {
                                     to={item.path}
                                     onClick={() => setIsOpen(false)}
                                     className={cn(
-                                        'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
-                                        location.pathname === item.path && 'text-[var(--color-tedx-red)] bg-muted'
+                                        'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
+                                        location.pathname === item.path && 'text-(--color-tedx-red) bg-muted'
                                     )}
                                 >
                                     {item.label}

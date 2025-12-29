@@ -28,7 +28,7 @@ export const EventCard = ({ event }: EventCardProps) => {
         <Card className='bg-white/10 backdrop-blur-md border border-white/20 text-white'>
             <CardContent className='p-6 space-y-4'>
                 <div className='flex items-center gap-3'>
-                    <Calendar className='w-5 h-5 text-[var(--color-tedx-red)]' />
+                    <Calendar className='w-5 h-5 text-(--color-tedx-red)' />
                     <div>
                         <p className='font-semibold'>{event.date}</p>
                         <p className='text-sm text-gray-300'>{event.time}</p>
@@ -36,7 +36,7 @@ export const EventCard = ({ event }: EventCardProps) => {
                 </div>
 
                 <div className='flex items-start gap-3'>
-                    <MapPin className='w-5 h-5 text-[var(--color-tedx-red)] mt-0.5' />
+                    <MapPin className='w-5 h-5 text-(--color-tedx-red) mt-0.5' />
                     <div>
                         <p className='font-semibold'>{event.venue}</p>
                         <p className='text-sm text-gray-300'>{event.location}</p>
@@ -44,7 +44,7 @@ export const EventCard = ({ event }: EventCardProps) => {
                 </div>
 
                 <div className='flex items-center gap-3'>
-                    <Users className='w-5 h-5 text-[var(--color-tedx-red)]' />
+                    <Users className='w-5 h-5 text-(--color-tedx-red)' />
                     <div>
                         <p className='font-semibold'>{event.expectedAttendees}+ Expected Attendees</p>
                         <p className='text-sm text-gray-300'>Limited seats available</p>

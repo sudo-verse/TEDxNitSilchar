@@ -137,7 +137,7 @@ export const ContactUsPage = () => {
                         className='text-center mb-16'
                     >
                         <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-                            Contact <span className='text-[var(--color-tedx-red)]'>Us</span>
+                            Contact <span className='text-(--color-tedx-red)'>Us</span>
                         </h1>
                         <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                             Have a question, idea, or want to get involved with TEDxNITSilchar 2026? We'd love to hear
@@ -163,15 +163,15 @@ export const ContactUsPage = () => {
                                         transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                                         className='bg-gray-900 p-6 rounded-2xl text-center hover:bg-gray-800 transition-colors'
                                     >
-                                        <div className='w-12 h-12 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                                            <IconComponent className='w-6 h-6 text-[var(--color-tedx-red)]' />
+                                        <div className='w-12 h-12 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+                                            <IconComponent className='w-6 h-6 text-(--color-tedx-red)' />
                                         </div>
                                         <h3 className='text-lg font-bold text-white mb-3'>{info.title}</h3>
                                         <div className='space-y-1 mb-3'>
                                             {info.details.map((detail, idx) => (
                                                 <p
                                                     key={idx}
-                                                    className='text-[var(--color-tedx-red)] font-medium'
+                                                    className='text-(--color-tedx-red) font-medium'
                                                 >
                                                     {detail}
                                                 </p>
@@ -205,7 +205,7 @@ export const ContactUsPage = () => {
                             >
                                 {/* Personal Information */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Personal Information
                                     </h3>
 
@@ -221,7 +221,7 @@ export const ContactUsPage = () => {
                                                 required
                                                 value={formData.name}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Your full name'
                                             />
                                         </div>
@@ -237,7 +237,7 @@ export const ContactUsPage = () => {
                                                 required
                                                 value={formData.email}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='your.email@example.com'
                                             />
                                         </div>
@@ -253,7 +253,7 @@ export const ContactUsPage = () => {
                                             name='phone'
                                             value={formData.phone}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='+91 9999999999'
                                         />
                                     </div>
@@ -261,7 +261,7 @@ export const ContactUsPage = () => {
 
                                 {/* Message Details */}
                                 <div>
-                                    <h3 className='text-xl font-bold text-[var(--color-tedx-red)] mb-6'>
+                                    <h3 className='text-xl font-bold text-(--color-tedx-red) mb-6'>
                                         Message Details
                                     </h3>
 
@@ -276,7 +276,7 @@ export const ContactUsPage = () => {
                                                 required
                                                 value={formData.subject}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                                 placeholder='Brief subject of your message'
                                             />
                                         </div>
@@ -290,7 +290,7 @@ export const ContactUsPage = () => {
                                                 name='category'
                                                 value={formData.category}
                                                 onChange={handleInputChange}
-                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                                className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             >
                                                 <option value=''>Select a category</option>
                                                 {contactCategories.map(category => (
@@ -316,7 +316,7 @@ export const ContactUsPage = () => {
                                             value={formData.message}
                                             onChange={handleInputChange}
                                             rows={6}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Tell us more about your inquiry, ideas, or how you would like to get involved with TEDxNITSilchar 2026...'
                                         />
                                     </div>
@@ -436,8 +436,8 @@ export const ContactUsPage = () => {
                                 transition={{ duration: 0.6, delay: 1.1 }}
                                 className='bg-gray-900 p-6 rounded-2xl text-center hover:bg-gray-800 transition-colors group'
                             >
-                                <div className='w-12 h-12 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                                    <Globe className='w-6 h-6 text-[var(--color-tedx-red)]' />
+                                <div className='w-12 h-12 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+                                    <Globe className='w-6 h-6 text-(--color-tedx-red)' />
                                 </div>
                                 <h4 className='text-lg font-bold text-white mb-3'>Official Website</h4>
                                 <p className='text-sm text-gray-300 mb-4'>
@@ -448,7 +448,7 @@ export const ContactUsPage = () => {
                                     href='https://tedxnitsilchar.com'
                                     target='_blank'
                                     rel='noopener noreferrer'
-                                    className='text-[var(--color-tedx-red)] hover:text-red-400 transition-colors text-sm font-medium'
+                                    className='text-(--color-tedx-red) hover:text-red-400 transition-colors text-sm font-medium'
                                 >
                                     tedxnitsilchar.com →
                                 </a>
@@ -460,15 +460,15 @@ export const ContactUsPage = () => {
                                 transition={{ duration: 0.6, delay: 1.2 }}
                                 className='bg-gray-900 p-6 rounded-2xl text-center hover:bg-gray-800 transition-colors group'
                             >
-                                <div className='w-12 h-12 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                                    <Users className='w-6 h-6 text-[var(--color-tedx-red)]' />
+                                <div className='w-12 h-12 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+                                    <Users className='w-6 h-6 text-(--color-tedx-red)' />
                                 </div>
                                 <h4 className='text-lg font-bold text-white mb-3'>Join Our Community</h4>
                                 <p className='text-sm text-gray-300 mb-4'>
                                     Become a volunteer, attend our meetups, or join our organizing committee to be part
                                     of the journey.
                                 </p>
-                                <button className='text-[var(--color-tedx-red)] hover:text-red-400 transition-colors text-sm font-medium'>
+                                <button className='text-(--color-tedx-red) hover:text-red-400 transition-colors text-sm font-medium'>
                                     Learn More →
                                 </button>
                             </motion.div>
@@ -479,15 +479,15 @@ export const ContactUsPage = () => {
                                 transition={{ duration: 0.6, delay: 1.3 }}
                                 className='bg-gray-900 p-6 rounded-2xl text-center hover:bg-gray-800 transition-colors group'
                             >
-                                <div className='w-12 h-12 bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                                    <Calendar className='w-6 h-6 text-[var(--color-tedx-red)]' />
+                                <div className='w-12 h-12 bg-(--color-tedx-red)/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+                                    <Calendar className='w-6 h-6 text-(--color-tedx-red)' />
                                 </div>
                                 <h4 className='text-lg font-bold text-white mb-3'>Event Updates</h4>
                                 <p className='text-sm text-gray-300 mb-4'>
                                     Subscribe to our newsletter for exclusive updates, early bird tickets, and speaker
                                     announcements.
                                 </p>
-                                <button className='text-[var(--color-tedx-red)] hover:text-red-400 transition-colors text-sm font-medium'>
+                                <button className='text-(--color-tedx-red) hover:text-red-400 transition-colors text-sm font-medium'>
                                     Subscribe Now →
                                 </button>
                             </motion.div>
@@ -507,7 +507,7 @@ export const ContactUsPage = () => {
                             </p>
                             <div className='flex flex-wrap justify-center gap-4'>
                                 <CTAButton className='px-8 py-3'>Get Involved</CTAButton>
-                                <button className='px-8 py-3 bg-transparent border border-[var(--color-tedx-red)] text-[var(--color-tedx-red)] rounded-full hover:bg-[var(--color-tedx-red)] hover:text-white transition-colors'>
+                                <button className='px-8 py-3 bg-transparent border border-(--color-tedx-red) text-(--color-tedx-red) rounded-full hover:bg-(--color-tedx-red) hover:text-white transition-colors'>
                                     Learn More
                                 </button>
                             </div>

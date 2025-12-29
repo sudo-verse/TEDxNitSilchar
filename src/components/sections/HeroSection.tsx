@@ -37,7 +37,7 @@ export const HeroSection = () => {
                         <div className='space-y-4'>
                             <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
                                 <span className='block'>{eventDetails.theme.split(' ').slice(0, 2).join(' ')}</span>
-                                <span className='block text-[var(--color-tedx-red)]'>
+                                <span className='block text-(--color-tedx-red)'>
                                     {eventDetails.theme.split(' ').slice(2).join(' ')}
                                 </span>
                             </h1>
@@ -47,7 +47,7 @@ export const HeroSection = () => {
                             </p>
 
                             <div className='space-y-3'>
-                                <div className='inline-block bg-[var(--color-tedx-red)]/20 border border-[var(--color-tedx-red)]/30 rounded-full px-4 py-2 text-sm font-semibold text-[var(--color-tedx-red)] mb-2'>
+                                <div className='inline-block bg-(--color-tedx-red)/20 border border-(--color-tedx-red)/30 rounded-full px-4 py-2 text-sm font-semibold text-(--color-tedx-red) mb-2'>
                                     🎉 INAUGURAL EVENT • FIRST TIME IN NIT SILCHAR
                                 </div>
                                 <p className='text-gray-400 leading-relaxed max-w-2xl'>

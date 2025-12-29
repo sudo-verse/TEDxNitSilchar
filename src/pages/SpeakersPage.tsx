@@ -62,7 +62,7 @@ export const SpeakersPage = () => {
                 >
                     <Link
                         to='/'
-                        className='inline-flex items-center gap-2 text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors mb-8'
+                        className='inline-flex items-center gap-2 text-gray-400 hover:text-(--color-tedx-red) transition-colors mb-8'
                     >
                         <ArrowLeft className='w-4 h-4' />
                         Back to Home
@@ -87,10 +87,10 @@ export const SpeakersPage = () => {
                             <div className='space-y-6'>
                                 <div className='space-y-4'>
                                     <h1 className='text-5xl md:text-6xl font-bold text-white'>
-                                        Our <span className='text-[var(--color-tedx-red)]'>Speakers</span>
+                                        Our <span className='text-(--color-tedx-red)'>Speakers</span>
                                     </h1>
 
-                                    <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto' />
+                                    <div className='w-24 h-1 bg-(--color-tedx-red) mx-auto' />
                                 </div>
 
                                 <p className='text-xl text-gray-300 leading-relaxed'>
@@ -132,9 +132,9 @@ export const SpeakersPage = () => {
                                                         <img
                                                             src={activeSpeaker.image}
                                                             alt={activeSpeaker.name}
-                                                            className='w-full h-full object-cover rounded-full border-4 border-[var(--color-tedx-red)] shadow-2xl'
+                                                            className='w-full h-full object-cover rounded-full border-4 border-(--color-tedx-red) shadow-2xl'
                                                         />
-                                                        <div className='absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--color-tedx-red)]/20 to-transparent' />
+                                                        <div className='absolute inset-0 rounded-full bg-gradient-to-tr from-(--color-tedx-red)/20 to-transparent' />
                                                     </div>
                                                 </motion.div>
                                             </AnimatePresence>
@@ -172,7 +172,7 @@ export const SpeakersPage = () => {
                                                             <img
                                                                 src={speaker.image}
                                                                 alt={speaker.name}
-                                                                className='w-full h-full object-cover rounded-full border-2 border-gray-600 hover:border-[var(--color-tedx-red)] transition-colors shadow-lg'
+                                                                className='w-full h-full object-cover rounded-full border-2 border-gray-600 hover:border-(--color-tedx-red) transition-colors shadow-lg'
                                                             />
                                                         </motion.button>
                                                     );
@@ -203,7 +203,7 @@ export const SpeakersPage = () => {
                                                         <h2 className='text-3xl md:text-4xl font-bold text-white'>
                                                             {activeSpeaker.name}
                                                         </h2>
-                                                        <p className='text-[var(--color-tedx-red)] text-lg font-medium'>
+                                                        <p className='text-(--color-tedx-red) text-lg font-medium'>
                                                             {activeSpeaker.title}
                                                         </p>
                                                         <p className='text-gray-400'>{activeSpeaker.company}</p>
@@ -230,7 +230,7 @@ export const SpeakersPage = () => {
                                                                     href={activeSpeaker.socialLinks.linkedin}
                                                                     target='_blank'
                                                                     rel='noopener noreferrer'
-                                                                    className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                                                    className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                                                 >
                                                                     LinkedIn
                                                                 </a>
@@ -240,7 +240,7 @@ export const SpeakersPage = () => {
                                                                     href={activeSpeaker.socialLinks.twitter}
                                                                     target='_blank'
                                                                     rel='noopener noreferrer'
-                                                                    className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                                                    className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                                                 >
                                                                     Twitter
                                                                 </a>
@@ -250,7 +250,7 @@ export const SpeakersPage = () => {
                                                                     href={activeSpeaker.socialLinks.website}
                                                                     target='_blank'
                                                                     rel='noopener noreferrer'
-                                                                    className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                                                    className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                                                 >
                                                                     Website
                                                                 </a>
@@ -272,7 +272,7 @@ export const SpeakersPage = () => {
                                                 <button
                                                     onClick={handlePrevSpeaker}
                                                     disabled={isAnimating}
-                                                    className='p-3 bg-gray-700 hover:bg-[var(--color-tedx-red)] text-white rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+                                                    className='p-3 bg-gray-700 hover:bg-(--color-tedx-red) text-white rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
                                                     aria-label='Previous speaker'
                                                 >
                                                     <ChevronLeft className='w-5 h-5' />
@@ -280,7 +280,7 @@ export const SpeakersPage = () => {
                                                 <button
                                                     onClick={handleNextSpeaker}
                                                     disabled={isAnimating}
-                                                    className='p-3 bg-gray-700 hover:bg-[var(--color-tedx-red)] text-white rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+                                                    className='p-3 bg-gray-700 hover:bg-(--color-tedx-red) text-white rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
                                                     aria-label='Next speaker'
                                                 >
                                                     <ChevronRight className='w-5 h-5' />
@@ -317,7 +317,7 @@ export const SpeakersPage = () => {
                                                 initial={{ opacity: 0, y: 50 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                                className='bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800 hover:border-[var(--color-tedx-red)]/50 transition-all cursor-pointer'
+                                                className='bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800 hover:border-(--color-tedx-red)/50 transition-all cursor-pointer'
                                                 onClick={() => handleSpeakerClick(index)}
                                             >
                                                 <div className='flex flex-col items-center text-center space-y-4'>
@@ -328,7 +328,7 @@ export const SpeakersPage = () => {
                                                     />
                                                     <div className='space-y-2'>
                                                         <h3 className='text-xl font-bold text-white'>{speaker.name}</h3>
-                                                        <p className='text-[var(--color-tedx-red)] font-medium'>
+                                                        <p className='text-(--color-tedx-red) font-medium'>
                                                             {speaker.title}
                                                         </p>
                                                         <p className='text-gray-400 text-sm'>{speaker.company}</p>
@@ -365,7 +365,7 @@ export const SpeakersPage = () => {
                                             <motion.div
                                                 animate={{ rotate: 360 }}
                                                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                                                className='absolute -inset-2 border-2 border-dashed border-[var(--color-tedx-red)]/30 rounded-full'
+                                                className='absolute -inset-2 border-2 border-dashed border-(--color-tedx-red)/30 rounded-full'
                                             />
                                         </div>
                                     </motion.div>
@@ -379,13 +379,13 @@ export const SpeakersPage = () => {
                                     >
                                         <div className='space-y-4'>
                                             <div className='flex items-center justify-center gap-3'>
-                                                <Clock className='w-6 h-6 text-[var(--color-tedx-red)]' />
+                                                <Clock className='w-6 h-6 text-(--color-tedx-red)' />
                                                 <h2 className='text-2xl md:text-3xl font-bold text-white'>
                                                     **Speakers Will Be Announced Soon**
                                                 </h2>
                                             </div>
 
-                                            <div className='w-16 h-1 bg-[var(--color-tedx-red)] mx-auto' />
+                                            <div className='w-16 h-1 bg-(--color-tedx-red) mx-auto' />
                                         </div>
 
                                         <div className='space-y-4 text-gray-300'>
@@ -397,7 +397,7 @@ export const SpeakersPage = () => {
                                             <p className='text-base leading-relaxed'>
                                                 Stay tuned as we unveil the visionaries, innovators, and changemakers
                                                 who will grace the TEDx NIT Silchar stage on{' '}
-                                                <span className='text-[var(--color-tedx-red)] font-semibold'>
+                                                <span className='text-(--color-tedx-red) font-semibold'>
                                                     February 8, 2026
                                                 </span>
                                                 .
@@ -419,9 +419,9 @@ export const SpeakersPage = () => {
                                                     <input
                                                         type='email'
                                                         placeholder='Enter your email'
-                                                        className='flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-[var(--color-tedx-red)] transition-colors'
+                                                        className='flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:border-(--color-tedx-red) transition-colors'
                                                     />
-                                                    <button className='px-6 py-3 bg-[var(--color-tedx-red)] hover:bg-red-700 text-white font-medium rounded-md transition-colors whitespace-nowrap'>
+                                                    <button className='px-6 py-3 bg-(--color-tedx-red) hover:bg-red-700 text-white font-medium rounded-md transition-colors whitespace-nowrap'>
                                                         Notify Me
                                                     </button>
                                                 </div>

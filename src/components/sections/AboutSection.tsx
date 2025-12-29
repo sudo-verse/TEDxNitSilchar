@@ -26,15 +26,15 @@ export const AboutSection = () => {
                         >
                             <div className='space-y-4'>
                                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                                    About <span className='text-[var(--color-tedx-red)]'>TEDx</span>NITSilchar
+                                    About <span className='text-(--color-tedx-red)'>TEDx</span>NITSilchar
                                 </h2>
 
-                                <div className='w-24 h-1 bg-[var(--color-tedx-red)]' />
+                                <div className='w-24 h-1 bg-(--color-tedx-red)' />
                             </div>
 
                             <div className='space-y-4 text-gray-300 text-lg leading-relaxed'>
-                                <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/10 to-transparent border-l-4 border-[var(--color-tedx-red)] pl-4 py-2 mb-4'>
-                                    <p className='text-[var(--color-tedx-red)] font-semibold text-sm uppercase tracking-wide'>
+                                <div className='bg-gradient-to-r from-(--color-tedx-red)/10 to-transparent border-l-4 border-(--color-tedx-red) pl-4 py-2 mb-4'>
+                                    <p className='text-(--color-tedx-red) font-semibold text-sm uppercase tracking-wide'>
                                         Making History • Inaugural Event
                                     </p>
                                 </div>
@@ -93,7 +93,7 @@ export const AboutSection = () => {
                         transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
                         className='text-center max-w-4xl mx-auto'
                     >
-                        <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/20 to-gray-800/50 rounded-2xl p-8 md:p-12'>
+                        <div className='bg-gradient-to-r from-(--color-tedx-red)/20 to-gray-800/50 rounded-2xl p-8 md:p-12'>
                             <blockquote className='text-xl md:text-2xl font-medium text-gray-200 leading-relaxed'>
                                 "We believe in the power of ideas to change attitudes, lives, and ultimately, the world.
                                 As we make history with the first-ever TEDx event at NIT Silchar, we're proud to pioneer

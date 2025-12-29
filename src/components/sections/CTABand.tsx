@@ -11,7 +11,7 @@ export const CTABand = () => {
         <section
             id='register'
             ref={sectionRef}
-            className='py-16 bg-[var(--color-tedx-red)]'
+            className='py-16 bg-(--color-tedx-red)'
         >
             <div className='container mx-auto px-4'>
                 <motion.div
@@ -47,7 +47,7 @@ export const CTABand = () => {
                             <CTAButton
                                 href='#buy-tickets'
                                 size='lg'
-                                className='text-lg px-12 py-4 bg-white text-[var(--color-tedx-red)] hover:bg-gray-100 border-0'
+                                className='text-lg px-12 py-4 bg-white text-(--color-tedx-red) hover:bg-gray-100 border-0'
                             >
                                 Buy Tickets Now
                             </CTAButton>
@@ -61,7 +61,7 @@ export const CTABand = () => {
                                 href='#volunteer'
                                 variant='secondary'
                                 size='lg'
-                                className='text-lg px-12 py-4 border-white/30 text-white hover:bg-white hover:text-[var(--color-tedx-red)]'
+                                className='text-lg px-12 py-4 border-white/30 text-white hover:bg-white hover:text-(--color-tedx-red)'
                             >
                                 Volunteer With Us
                             </CTAButton>

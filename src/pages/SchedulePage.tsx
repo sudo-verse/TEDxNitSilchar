@@ -30,10 +30,10 @@ export const SchedulePage = () => {
                             <div className='space-y-6'>
                                 <div className='space-y-4'>
                                     <h1 className='text-4xl md:text-6xl font-bold text-white'>
-                                        Event <span className='text-[var(--color-tedx-red)]'>Schedule</span>
+                                        Event <span className='text-(--color-tedx-red)'>Schedule</span>
                                     </h1>
 
-                                    <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto' />
+                                    <div className='w-24 h-1 bg-(--color-tedx-red) mx-auto' />
                                 </div>
 
                                 <p className='text-xl text-gray-300 leading-relaxed'>
@@ -67,7 +67,7 @@ export const SchedulePage = () => {
                                             whileHover={{ scale: 1.05 }}
                                             className='flex flex-col items-center space-y-2'
                                         >
-                                            <item.icon className='w-8 h-8 text-[var(--color-tedx-red)]' />
+                                            <item.icon className='w-8 h-8 text-(--color-tedx-red)' />
                                             <div>
                                                 <h3 className='font-semibold text-white'>{item.title}</h3>
                                                 <p className='text-gray-300'>{item.value}</p>
@@ -83,7 +83,7 @@ export const SchedulePage = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     onClick={handleDownloadSchedule}
-                                    className='inline-flex items-center gap-2 px-6 py-3 bg-gray-800 border border-[var(--color-tedx-red)] text-[var(--color-tedx-red)] rounded-lg hover:bg-[var(--color-tedx-red)] hover:text-white transition-colors font-semibold'
+                                    className='inline-flex items-center gap-2 px-6 py-3 bg-gray-800 border border-(--color-tedx-red) text-(--color-tedx-red) rounded-lg hover:bg-(--color-tedx-red) hover:text-white transition-colors font-semibold'
                                 >
                                     <Download className='w-5 h-5' />
                                     Download Full Schedule

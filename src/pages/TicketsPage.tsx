@@ -133,7 +133,7 @@ export const TicketsPage = () => {
                         className='text-center mb-16'
                     >
                         <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-                            Get Your <span className='text-[var(--color-tedx-red)]'>Tickets</span>
+                            Get Your <span className='text-(--color-tedx-red)'>Tickets</span>
                         </h1>
                         <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                             Register for free at TEDxNITSilchar 2026 and be part of our inaugural extraordinary day of
@@ -157,13 +157,13 @@ export const TicketsPage = () => {
                                         whileHover={{ scale: 1.02 }}
                                         className={`relative p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
                                             selectedTicket === ticket.id
-                                                ? 'border-[var(--color-tedx-red)] bg-[var(--color-tedx-red)]/10'
+                                                ? 'border-(--color-tedx-red) bg-(--color-tedx-red)/10'
                                                 : 'border-gray-700 bg-gray-900'
-                                        } ${ticket.popular ? 'ring-2 ring-[var(--color-tedx-red)]/50' : ''}`}
+                                        } ${ticket.popular ? 'ring-2 ring-(--color-tedx-red)/50' : ''}`}
                                         onClick={() => setSelectedTicket(ticket.id)}
                                     >
                                         {ticket.popular && (
-                                            <div className='absolute -top-3 left-6 bg-[var(--color-tedx-red)] text-white px-4 py-1 rounded-full text-sm font-semibold'>
+                                            <div className='absolute -top-3 left-6 bg-(--color-tedx-red) text-white px-4 py-1 rounded-full text-sm font-semibold'>
                                                 Most Popular
                                             </div>
                                         )}
@@ -172,7 +172,7 @@ export const TicketsPage = () => {
                                             <div>
                                                 <h3 className='text-xl font-bold text-white'>{ticket.name}</h3>
                                                 <div className='flex items-center gap-2 mt-2'>
-                                                    <span className='text-2xl font-bold text-[var(--color-tedx-red)]'>
+                                                    <span className='text-2xl font-bold text-(--color-tedx-red)'>
                                                         {ticket.price === 0 ? 'FREE' : `₹${ticket.price}`}
                                                     </span>
                                                     {ticket.originalPrice && (
@@ -186,7 +186,7 @@ export const TicketsPage = () => {
                                             <div
                                                 className={`w-6 h-6 rounded-full border-2 ${
                                                     selectedTicket === ticket.id
-                                                        ? 'border-[var(--color-tedx-red)] bg-[var(--color-tedx-red)]'
+                                                        ? 'border-(--color-tedx-red) bg-(--color-tedx-red)'
                                                         : 'border-gray-500'
                                                 } flex items-center justify-center`}
                                             >
@@ -202,7 +202,7 @@ export const TicketsPage = () => {
                                                     key={index}
                                                     className='flex items-center gap-3 text-gray-300'
                                                 >
-                                                    <Check className='w-4 h-4 text-[var(--color-tedx-red)] flex-shrink-0' />
+                                                    <Check className='w-4 h-4 text-(--color-tedx-red) flex-shrink-0' />
                                                     <span className='text-sm'>{feature}</span>
                                                 </li>
                                             ))}
@@ -231,7 +231,7 @@ export const TicketsPage = () => {
                                             <p className='text-gray-400 text-sm'>TEDxNITSilchar 2026</p>
                                         </div>
                                         <div className='text-right'>
-                                            <p className='text-2xl font-bold text-[var(--color-tedx-red)]'>
+                                            <p className='text-2xl font-bold text-(--color-tedx-red)'>
                                                 {selectedTicketData.price === 0
                                                     ? 'FREE'
                                                     : `₹${selectedTicketData.price}`}
@@ -262,7 +262,7 @@ export const TicketsPage = () => {
                                             required
                                             value={formData.name}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Enter your full name'
                                         />
                                     </div>
@@ -278,7 +278,7 @@ export const TicketsPage = () => {
                                             required
                                             value={formData.email}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Enter your email'
                                         />
                                     </div>
@@ -296,7 +296,7 @@ export const TicketsPage = () => {
                                             required
                                             value={formData.phone}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Enter your phone number'
                                         />
                                     </div>
@@ -311,7 +311,7 @@ export const TicketsPage = () => {
                                             name='organization'
                                             value={formData.organization}
                                             onChange={handleInputChange}
-                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                            className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                             placeholder='Your organization/institution'
                                         />
                                     </div>
@@ -326,7 +326,7 @@ export const TicketsPage = () => {
                                         value={formData.dietary}
                                         onChange={handleInputChange}
                                         rows={3}
-                                        className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-[var(--color-tedx-red)] focus:outline-none'
+                                        className='w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-(--color-tedx-red) focus:outline-none'
                                         placeholder='Any dietary restrictions or special requirements?'
                                     />
                                 </div>
@@ -345,7 +345,7 @@ export const TicketsPage = () => {
                                     <hr className='border-gray-700 my-2' />
                                     <div className='flex items-center justify-between font-bold'>
                                         <span className='text-white'>Total:</span>
-                                        <span className='text-[var(--color-tedx-red)] text-xl'>
+                                        <span className='text-(--color-tedx-red) text-xl'>
                                             {(selectedTicketData?.price || 0) + 0 === 0
                                                 ? 'FREE'
                                                 : `₹${(selectedTicketData?.price || 0) + 0}`}

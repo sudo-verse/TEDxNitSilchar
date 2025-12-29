@@ -35,7 +35,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/'
-                                        className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                        className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                     >
                                         About
                                     </Link>
@@ -43,7 +43,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/speakers'
-                                        className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                        className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                     >
                                         Speakers
                                     </Link>
@@ -51,7 +51,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/schedule'
-                                        className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                        className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                     >
                                         Schedule
                                     </Link>
@@ -59,7 +59,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/partners'
-                                        className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                        className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                     >
                                         Partners
                                     </Link>
@@ -67,7 +67,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/team'
-                                        className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                        className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                     >
                                         Team
                                     </Link>
@@ -75,7 +75,7 @@ export const Footer = () => {
                                 <li>
                                     <Link
                                         to='/contact'
-                                        className='text-gray-400 hover:text-[var(--color-tedx-red)] transition-colors'
+                                        className='text-gray-400 hover:text-(--color-tedx-red) transition-colors'
                                     >
                                         Contact
                                     </Link>
@@ -89,14 +89,14 @@ export const Footer = () => {
                             <div className='flex gap-4'>
                                 <button
                                     onClick={() => window.open('https://www.instagram.com/tedx.nitsilchar/', '_blank')}
-                                    className='p-2 bg-gray-800 rounded-full hover:bg-[var(--color-tedx-red)] transition-colors'
+                                    className='p-2 bg-gray-800 rounded-full hover:bg-(--color-tedx-red) transition-colors'
                                 >
                                     <Instagram className='w-5 h-5' />
                                 </button>
 
                                 <button
                                     onClick={() => window.open('https://www.linkedin.com/in/tedxnitsilchar-1b7124389/', '_blank')}
-                                    className='p-2 bg-gray-800 rounded-full hover:bg-[var(--color-tedx-red)] transition-colors'
+                                    className='p-2 bg-gray-800 rounded-full hover:bg-(--color-tedx-red) transition-colors'
                                 >
                                     <Linkedin className='w-5 h-5' />
                                 </button>

@@ -84,11 +84,11 @@ export const SpeakerCard = ({ speaker, index, inView, onClick }: SpeakerCardProp
                 {/* Content */}
                 <div className='p-6 space-y-3'>
                     <div className='space-y-1'>
-                        <h3 className='text-xl font-bold text-gray-900 group-hover:text-[var(--color-tedx-red)] transition-colors'>
+                        <h3 className='text-xl font-bold text-gray-900 group-hover:text-(--color-tedx-red) transition-colors'>
                             {speaker.name}
                         </h3>
 
-                        <p className='text-[var(--color-tedx-red)] font-medium'>{speaker.title}</p>
+                        <p className='text-(--color-tedx-red) font-medium'>{speaker.title}</p>
 
                         {speaker.company && <p className='text-gray-600 text-sm'>{speaker.company}</p>}
                     </div>
@@ -96,7 +96,7 @@ export const SpeakerCard = ({ speaker, index, inView, onClick }: SpeakerCardProp
                     <p className='text-gray-700 text-sm leading-relaxed line-clamp-3'>"{speaker.talkTitle}"</p>
 
                     <div className='pt-2'>
-                        <button className='text-sm text-[var(--color-tedx-red)] hover:underline font-medium'>
+                        <button className='text-sm text-(--color-tedx-red) hover:underline font-medium'>
                             View Details →
                         </button>
                     </div>

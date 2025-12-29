@@ -39,10 +39,10 @@ export const ThemeSection = () => {
                             <div className='space-y-4'>
                                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
                                     Theme 2026:{' '}
-                                    <span className='text-[var(--color-tedx-red)]'>{themeDescription.title}</span>
+                                    <span className='text-(--color-tedx-red)'>{themeDescription.title}</span>
                                 </h2>
 
-                                <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto' />
+                                <div className='w-24 h-1 bg-(--color-tedx-red) mx-auto' />
                             </div>
 
                             <p className='text-xl text-gray-300 leading-relaxed'>{themeDescription.description}</p>
@@ -113,7 +113,7 @@ export const ThemeSection = () => {
                                     <CTAButton
                                         href='#volunteer'
                                         variant='secondary'
-                                        className='px-8 py-3 border-white/30 text-[var(--color-tedx-red)] hover:bg-[var(--color-tedx-red)] hover:text-white font-semibold'
+                                        className='px-8 py-3 border-white/30 text-(--color-tedx-red) hover:bg-(--color-tedx-red) hover:text-white font-semibold'
                                     >
                                         Join Our Team
                                     </CTAButton>

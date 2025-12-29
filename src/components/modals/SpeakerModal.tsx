@@ -42,7 +42,7 @@ export const SpeakerModal = ({ speaker, isOpen, onClose }: SpeakerModalProps) =>
                             <div className='space-y-2'>
                                 <DialogTitle className='text-3xl font-bold text-gray-900'>{speaker.name}</DialogTitle>
 
-                                <p className='text-xl text-[var(--color-tedx-red)] font-semibold'>{speaker.title}</p>
+                                <p className='text-xl text-(--color-tedx-red) font-semibold'>{speaker.title}</p>
 
                                 {speaker.company && <p className='text-gray-600'>{speaker.company}</p>}
                             </div>
@@ -88,7 +88,7 @@ export const SpeakerModal = ({ speaker, isOpen, onClose }: SpeakerModalProps) =>
                         <div className='space-y-4'>
                             <div>
                                 <h3 className='text-xl font-bold text-gray-900 mb-2'>Talk Title</h3>
-                                <p className='text-lg text-[var(--color-tedx-red)] font-medium'>
+                                <p className='text-lg text-(--color-tedx-red) font-medium'>
                                     "{speaker.talkTitle}"
                                 </p>
                             </div>
