@@ -1,0 +1,62 @@
+/* =========================
+   TEDx NIT Silchar Loader
+   ========================= */
+
+.tedx-loader {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Rotating ring */
+.ring {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-top-color: #e62b1e; /* TEDx Red */
+    animation: spin 1.2s linear infinite;
+    margin-bottom: 22px;
+    box-shadow: 0 0 20px rgba(230, 43, 30, 0.4);
+}
+
+/* Brand text */
+.brand {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.brand .ted {
+    color: #ffffff;
+}
+
+.brand .x {
+    color: #e62b1e;
+}
+
+.brand .college {
+    color: #ffffff;
+}
+
+/* Tagline */
+.tagline {
+    margin-top: 6px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
