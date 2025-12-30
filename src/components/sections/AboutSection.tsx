@@ -12,29 +12,29 @@ export const AboutSection = () => {
         <section
             id='about'
             ref={sectionRef}
-            className='py-20 bg-black'
+            className='py-12 sm:py-16 lg:py-20 bg-black'
         >
-            <div className='container mx-auto px-4'>
+            <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='grid lg:grid-cols-2 gap-16 items-center mb-16'>
+                    <div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-8 sm:mb-12 lg:mb-16'>
                         {/* Left Content */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                             transition={{ duration: 0.8, ease: 'easeOut' }}
-                            className='space-y-6'
+                            className='space-y-5 sm:space-y-6'
                         >
                             <div className='space-y-4'>
-                                <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                                    About <span className='text-(--color-tedx-red)'>TEDx</span>NITSilchar
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white'>
+                                    About <span className='text-[var(--color-tedx-red)]'>TEDx</span>NITSilchar
                                 </h2>
 
-                                <div className='w-24 h-1 bg-(--color-tedx-red)' />
+                                <div className='w-24 h-1 bg-[var(--color-tedx-red)]' />
                             </div>
 
-                            <div className='space-y-4 text-gray-300 text-lg leading-relaxed'>
-                                <div className='bg-gradient-to-r from-(--color-tedx-red)/10 to-transparent border-l-4 border-(--color-tedx-red) pl-4 py-2 mb-4'>
-                                    <p className='text-(--color-tedx-red) font-semibold text-sm uppercase tracking-wide'>
+                            <div className='space-y-4 sm:space-y-5 text-gray-300 text-base sm:text-lg leading-relaxed'>
+                                <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/10 to-transparent border-l-4 border-[var(--color-tedx-red)] pl-3 sm:pl-4 py-2 mb-4'>
+                                    <p className='text-[var(--color-tedx-red)] font-semibold text-xs sm:text-sm uppercase tracking-wide'>
                                         Making History • Inaugural Event
                                     </p>
                                 </div>
@@ -62,8 +62,8 @@ export const AboutSection = () => {
                                 </p>
                             </div>
 
-                            <div className='pt-4'>
-                                <p className='text-sm text-gray-400 italic'>
+                            <div className='pt-3 sm:pt-4'>
+                                <p className='text-xs sm:text-sm text-gray-400 italic'>
                                     This independent TEDx event is operated under license from TED.
                                 </p>
                             </div>
@@ -75,10 +75,12 @@ export const AboutSection = () => {
                             animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
                         >
-                            <div className='bg-gray-800 rounded-2xl p-8 md:p-12'>
-                                <div className='text-center mb-8'>
-                                    <h3 className='text-2xl font-bold text-white mb-2'>Event at a Glance</h3>
-                                    <p className='text-gray-300'>Numbers that showcase our impact</p>
+                            <div className='bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-12'>
+                                <div className='text-center mb-6 sm:mb-8'>
+                                    <h3 className='text-xl sm:text-2xl font-bold text-white mb-2'>Event at a Glance</h3>
+                                    <p className='text-sm sm:text-base text-gray-300'>
+                                        Numbers that showcase our impact
+                                    </p>
                                 </div>
 
                                 <StatsGrid stats={eventStats} />
@@ -93,13 +95,13 @@ export const AboutSection = () => {
                         transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
                         className='text-center max-w-4xl mx-auto'
                     >
-                        <div className='bg-gradient-to-r from-(--color-tedx-red)/20 to-gray-800/50 rounded-2xl p-8 md:p-12'>
-                            <blockquote className='text-xl md:text-2xl font-medium text-gray-200 leading-relaxed'>
+                        <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/20 to-gray-800/50 rounded-2xl p-6 sm:p-8 md:p-12'>
+                            <blockquote className='text-lg sm:text-xl md:text-2xl font-medium text-gray-200 leading-relaxed'>
                                 "We believe in the power of ideas to change attitudes, lives, and ultimately, the world.
                                 As we make history with the first-ever TEDx event at NIT Silchar, we're proud to pioneer
                                 the spread of transformative ideas from the heart of Northeast India."
                             </blockquote>
-                            <cite className='block mt-6 text-gray-300 font-medium'>
+                            <cite className='block mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 font-medium'>
                                 — TEDxNITSilchar Organizing Committee
                             </cite>
                         </div>

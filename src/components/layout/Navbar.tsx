@@ -53,11 +53,13 @@ export const Navbar = () => {
         <nav
             className={cn(
                 'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-                isScrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+                isScrolled
+                    ? 'bg-background/80 backdrop-blur-xl shadow-lg border-b border-white/10'
+                    : 'bg-black/10 backdrop-blur-sm'
             )}
         >
-            <div className='container mx-auto px-4'>
-                <div className='flex items-center justify-between h-16 md:h-20'>
+            <div className='container mx-auto px-4 sm:px-6 lg:px-4'>
+                <div className='flex items-center justify-between h-14 sm:h-16 md:h-20'>
                     {/* Logo */}
                     <Link
                         to='/'
@@ -72,9 +74,9 @@ export const Navbar = () => {
                         <Link
                             to='/'
                             className={cn(
-                                'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
+                                'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
                                 location.pathname === '/'
-                                    ? 'text-(--color-tedx-red)'
+                                    ? 'text-[var(--color-tedx-red)]'
                                     : isScrolled
                                       ? 'text-muted-foreground'
                                       : 'text-white'
@@ -89,9 +91,9 @@ export const Navbar = () => {
                                 <button
                                     onClick={() => handleNavClick('about')}
                                     className={cn(
-                                        'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
+                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
                                         activeSection === 'about'
-                                            ? 'text-(--color-tedx-red)'
+                                            ? 'text-[var(--color-tedx-red)]'
                                             : isScrolled
                                               ? 'text-muted-foreground'
                                               : 'text-white'
@@ -102,9 +104,9 @@ export const Navbar = () => {
                                 <button
                                     onClick={() => handleNavClick('theme')}
                                     className={cn(
-                                        'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
+                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
                                         activeSection === 'theme'
-                                            ? 'text-(--color-tedx-red)'
+                                            ? 'text-[var(--color-tedx-red)]'
                                             : isScrolled
                                               ? 'text-muted-foreground'
                                               : 'text-white'
@@ -121,9 +123,9 @@ export const Navbar = () => {
                                 key={item.path}
                                 to={item.path}
                                 className={cn(
-                                    'text-sm font-medium transition-colors duration-200 hover:text-(--color-tedx-red)',
+                                    'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
                                     location.pathname === item.path
-                                        ? 'text-(--color-tedx-red)'
+                                        ? 'text-[var(--color-tedx-red)]'
                                         : isScrolled
                                           ? 'text-muted-foreground'
                                           : 'text-white'
@@ -159,15 +161,15 @@ export const Navbar = () => {
 
                 {/* Mobile Navigation */}
                 {isOpen && (
-                    <div className='lg:hidden absolute top-full left-0 right-0 bg-background border-t border-border shadow-lg'>
-                        <div className='py-4'>
+                    <div className='lg:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-xl border-t border-white/10 shadow-lg'>
+                        <div className='py-2 sm:py-4'>
                             {/* Home link */}
                             <Link
                                 to='/'
                                 onClick={() => setIsOpen(false)}
                                 className={cn(
-                                    'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
-                                    location.pathname === '/' && 'text-(--color-tedx-red) bg-muted'
+                                    'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                    location.pathname === '/' && 'text-[var(--color-tedx-red)] bg-muted'
                                 )}
                             >
                                 Home
@@ -179,8 +181,8 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => handleNavClick('about')}
                                         className={cn(
-                                            'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
-                                            activeSection === 'about' && 'text-(--color-tedx-red) bg-muted'
+                                            'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                            activeSection === 'about' && 'text-[var(--color-tedx-red)] bg-muted'
                                         )}
                                     >
                                         About
@@ -188,8 +190,8 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => handleNavClick('theme')}
                                         className={cn(
-                                            'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
-                                            activeSection === 'theme' && 'text-(--color-tedx-red) bg-muted'
+                                            'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                            activeSection === 'theme' && 'text-[var(--color-tedx-red)] bg-muted'
                                         )}
                                     >
                                         Theme
@@ -204,8 +206,8 @@ export const Navbar = () => {
                                     to={item.path}
                                     onClick={() => setIsOpen(false)}
                                     className={cn(
-                                        'block w-full text-left px-4 py-3 text-foreground hover:bg-muted hover:text-(--color-tedx-red) transition-colors',
-                                        location.pathname === item.path && 'text-(--color-tedx-red) bg-muted'
+                                        'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                        location.pathname === item.path && 'text-[var(--color-tedx-red)] bg-muted'
                                     )}
                                 >
                                     {item.label}
@@ -213,10 +215,10 @@ export const Navbar = () => {
                             ))}
 
                             {/* Mobile CTA Section */}
-                            <div className='px-4 pt-4 border-t border-border'>
+                            <div className='px-4 sm:px-6 pt-3 sm:pt-4 border-t border-border'>
                                 <CTAButton
                                     href='#register'
-                                    className='w-full'
+                                    className='w-full py-3 sm:py-4'
                                 >
                                     Buy Tickets
                                 </CTAButton>

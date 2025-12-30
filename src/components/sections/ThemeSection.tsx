@@ -24,28 +24,30 @@ export const ThemeSection = () => {
         <section
             id='theme'
             ref={sectionRef}
-            className='py-20 bg-black'
+            className='py-12 sm:py-16 lg:py-20 bg-black'
         >
-            <div className='container mx-auto px-4'>
+            <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>
                     {/* Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='text-center max-w-4xl mx-auto mb-16'
+                        className='text-center max-w-4xl mx-auto mb-10 sm:mb-12 lg:mb-16'
                     >
-                        <div className='space-y-6'>
-                            <div className='space-y-4'>
-                                <h2 className='text-4xl md:text-5xl font-bold text-white'>
+                        <div className='space-y-5 sm:space-y-6'>
+                            <div className='space-y-3 sm:space-y-4'>
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white'>
                                     Theme 2026:{' '}
-                                    <span className='text-(--color-tedx-red)'>{themeDescription.title}</span>
+                                    <span className='text-[var(--color-tedx-red)]'>{themeDescription.title}</span>
                                 </h2>
 
-                                <div className='w-24 h-1 bg-(--color-tedx-red) mx-auto' />
+                                <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto' />
                             </div>
 
-                            <p className='text-xl text-gray-300 leading-relaxed'>{themeDescription.description}</p>
+                            <p className='text-lg sm:text-xl text-gray-300 leading-relaxed'>
+                                {themeDescription.description}
+                            </p>
                         </div>
                     </motion.div>
 
@@ -54,7 +56,7 @@ export const ThemeSection = () => {
                         initial={{ opacity: 0 }}
                         animate={hasBeenInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8'
+                        className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8'
                     >
                         {themeDescription.pillars.map((pillar, index) => {
                             const IconComponent = iconMap[pillar.icon as keyof typeof iconMap];
@@ -89,20 +91,20 @@ export const ThemeSection = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
-                        className='text-center mt-16'
+                        className='text-center mt-10 sm:mt-12 lg:mt-16'
                     >
-                        <div className='bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto'>
-                            <div className='space-y-6'>
-                                <h3 className='text-2xl md:text-3xl font-bold text-white'>
+                        <div className='bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg max-w-4xl mx-auto'>
+                            <div className='space-y-5 sm:space-y-6'>
+                                <h3 className='text-xl sm:text-2xl md:text-3xl font-bold text-white'>
                                     Ready to Share Your Legacy?
                                 </h3>
 
-                                <p className='text-lg text-gray-300'>
+                                <p className='text-base sm:text-lg text-gray-300'>
                                     Whether you're an entrepreneur, researcher, artist, or change-maker, we'd love to
                                     hear how you're turning lessons into legacies.
                                 </p>
 
-                                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                                <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center'>
                                     <CTAButton
                                         href='#speaker-nomination'
                                         className='px-8 py-3 text-white font-semibold'
@@ -113,7 +115,7 @@ export const ThemeSection = () => {
                                     <CTAButton
                                         href='#volunteer'
                                         variant='secondary'
-                                        className='px-8 py-3 border-white/30 text-(--color-tedx-red) hover:bg-(--color-tedx-red) hover:text-white font-semibold'
+                                        className='px-8 py-3 border-white/30 text-[var(--color-tedx-red)] hover:bg-[var(--color-tedx-red)] hover:text-white font-semibold'
                                     >
                                         Join Our Team
                                     </CTAButton>

@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <section
             id='home'
             ref={sectionRef}
-            className='relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden pt-16 md:pt-20'
+            className='relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden pt-20 pb-8 md:pt-20 md:pb-0'
         >
             {/* Background Pattern */}
             <div className='absolute inset-0 opacity-10'>
@@ -24,33 +24,33 @@ export const HeroSection = () => {
             {/* Background Video Placeholder */}
             <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/70' />
 
-            <div className='container mx-auto px-4 relative z-10 pb-24 lg:pb-16'>
-                <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
+            <div className='container mx-auto px-6 sm:px-8 md:px-4 relative z-10 pb-16 lg:pb-16'>
+                <div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center'>
                     {/* Left Content */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='space-y-8'
+                        className='space-y-6 sm:space-y-8'
                     >
                         {/* Main Headline */}
                         <div className='space-y-4'>
-                            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
+                            <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
                                 <span className='block'>{eventDetails.theme.split(' ').slice(0, 2).join(' ')}</span>
-                                <span className='block text-(--color-tedx-red)'>
+                                <span className='block text-[var(--color-tedx-red)]'>
                                     {eventDetails.theme.split(' ').slice(2).join(' ')}
                                 </span>
                             </h1>
 
-                            <p className='text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
+                            <p className='text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
                                 {eventDetails.tagline}
                             </p>
 
-                            <div className='space-y-3'>
-                                <div className='inline-block bg-(--color-tedx-red)/20 border border-(--color-tedx-red)/30 rounded-full px-4 py-2 text-sm font-semibold text-(--color-tedx-red) mb-2'>
+                            <div className='space-y-4 sm:space-y-3'>
+                                <div className='inline-block bg-[var(--color-tedx-red)]/20 border border-[var(--color-tedx-red)]/30 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-[var(--color-tedx-red)] mb-3 sm:mb-2'>
                                     🎉 INAUGURAL EVENT • FIRST TIME IN NIT SILCHAR
                                 </div>
-                                <p className='text-gray-400 leading-relaxed max-w-2xl'>
+                                <p className='text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl'>
                                     Join us for an extraordinary day of inspiring talks, innovative ideas, and
                                     meaningful connections as we make history with the very first TEDx event at National
                                     Institute of Technology Silchar.
@@ -59,11 +59,11 @@ export const HeroSection = () => {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className='flex flex-col sm:flex-row gap-4'>
+                        <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-0'>
                             <CTAButton
                                 href='#register'
                                 size='lg'
-                                className='text-lg px-8 py-4'
+                                className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4'
                             >
                                 Buy Tickets
                             </CTAButton>
@@ -72,7 +72,7 @@ export const HeroSection = () => {
                                 href='#partner'
                                 variant='secondary'
                                 size='lg'
-                                className='text-lg px-8 py-4 border-white/30 text-white hover:bg-white hover:text-black'
+                                className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white/30 text-white hover:bg-white hover:text-black'
                             >
                                 Become a Partner
                             </CTAButton>
@@ -84,9 +84,9 @@ export const HeroSection = () => {
                         initial={{ opacity: 0, x: 50 }}
                         animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                         transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-                        className='flex justify-center lg:justify-end'
+                        className='flex justify-center lg:justify-end mt-8 lg:mt-0'
                     >
-                        <div className='w-full max-w-sm'>
+                        <div className='w-full max-w-xs sm:max-w-sm'>
                             <EventCard event={eventDetails} />
                         </div>
                     </motion.div>

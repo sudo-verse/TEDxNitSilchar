@@ -11,14 +11,14 @@ export const CTABand = () => {
         <section
             id='register'
             ref={sectionRef}
-            className='py-16 bg-(--color-tedx-red)'
+            className='py-12 sm:py-14 lg:py-16 bg-[var(--color-tedx-red)]'
         >
-            <div className='container mx-auto px-4'>
+            <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={hasBeenInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
-                    className='max-w-4xl mx-auto text-center space-y-8'
+                    className='max-w-4xl mx-auto text-center space-y-6 sm:space-y-8'
                 >
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -26,9 +26,11 @@ export const CTABand = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className='space-y-4'
                     >
-                        <h2 className='text-4xl md:text-5xl font-bold text-white'>Join TEDxNITSilchar 2026</h2>
+                        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white'>
+                            Join TEDxNITSilchar 2026
+                        </h2>
 
-                        <p className='text-xl text-white/90 leading-relaxed'>
+                        <p className='text-lg sm:text-xl text-white/90 leading-relaxed'>
                             Be part of an extraordinary day of inspiring ideas, meaningful connections, and
                             transformative experiences at NIT Silchar.
                         </p>
@@ -38,7 +40,7 @@ export const CTABand = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className='flex flex-col sm:flex-row gap-4 justify-center'
+                        className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center'
                     >
                         <motion.div
                             whileHover={{ scale: 1.05 }}
@@ -47,7 +49,7 @@ export const CTABand = () => {
                             <CTAButton
                                 href='#buy-tickets'
                                 size='lg'
-                                className='text-lg px-12 py-4 bg-white text-(--color-tedx-red) hover:bg-gray-100 border-0'
+                                className='text-lg px-12 py-4 bg-white text-[var(--color-tedx-red)] hover:bg-gray-100 border-0'
                             >
                                 Buy Tickets Now
                             </CTAButton>
@@ -61,7 +63,7 @@ export const CTABand = () => {
                                 href='#volunteer'
                                 variant='secondary'
                                 size='lg'
-                                className='text-lg px-12 py-4 border-white/30 text-white hover:bg-white hover:text-(--color-tedx-red)'
+                                className='text-lg px-12 py-4 border-white/30 text-white hover:bg-white hover:text-[var(--color-tedx-red)]'
                             >
                                 Volunteer With Us
                             </CTAButton>

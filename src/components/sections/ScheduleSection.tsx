@@ -32,9 +32,9 @@ export const ScheduleSection = () => {
         <section
             id='schedule'
             ref={sectionRef}
-            className='py-20 bg-black'
+            className='py-12 sm:py-16 lg:py-20 bg-black'
         >
-            <div className='container mx-auto px-4'>
+            <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>
                     {/* Header */}
                     <motion.div
@@ -46,10 +46,10 @@ export const ScheduleSection = () => {
                         <div className='space-y-6'>
                             <div className='space-y-4'>
                                 <h2 className='text-4xl md:text-5xl font-bold text-white'>
-                                    Event <span className='text-(--color-tedx-red)'>Schedule</span>
+                                    Event <span className='text-[var(--color-tedx-red)]'>Schedule</span>
                                 </h2>
 
-                                <div className='w-24 h-1 bg-(--color-tedx-red) mx-auto' />
+                                <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto' />
                             </div>
 
                             <p className='text-xl text-gray-300 leading-relaxed'>
@@ -59,7 +59,7 @@ export const ScheduleSection = () => {
 
                             <button
                                 onClick={handleDownloadSchedule}
-                                className='inline-flex items-center gap-2 px-6 py-3 bg-gray-800 border border-(--color-tedx-red) text-(--color-tedx-red) rounded-lg hover:bg-(--color-tedx-red) hover:text-white transition-colors font-semibold'
+                                className='inline-flex items-center gap-2 px-6 py-3 bg-gray-800 border border-[var(--color-tedx-red)] text-[var(--color-tedx-red)] rounded-lg hover:bg-[var(--color-tedx-red)] hover:text-white transition-colors font-semibold'
                             >
                                 <Download className='w-5 h-5' />
                                 Download Full Schedule
@@ -88,7 +88,7 @@ export const ScheduleSection = () => {
                                     NIT Silchar unforgettable.
                                 </p>
                                 <div className='pt-4'>
-                                    <p className='text-(--color-tedx-red) font-semibold text-lg'>
+                                    <p className='text-[var(--color-tedx-red)] font-semibold text-lg'>
                                         Follow us for updates!
                                     </p>
                                 </div>
