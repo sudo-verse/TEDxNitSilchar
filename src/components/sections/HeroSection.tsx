@@ -99,10 +99,11 @@ export const HeroSection = () => {
 
                     {/* Right Content - Event Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                        transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+                        initial={{ opacity: 0, x: 100, rotateY: 10 }}
+                        animate={hasBeenInView ? { opacity: 1, x: 0, rotateY: 0 } : { opacity: 0, x: 100, rotateY: 10 }}
+                        transition={{ duration: 0.9, delay: 0.3, ease: [0.23, 1, 0.320, 1] }}
                         className='flex justify-center lg:justify-end mt-8 lg:mt-0'
+                        style={{ perspective: 1000 }}
                     >
                         <div className='w-full max-w-xs sm:max-w-sm'>
                             <EventCard event={eventDetails} />
