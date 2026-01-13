@@ -15,9 +15,9 @@ export const CTABand = () => {
         >
             <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={hasBeenInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                    animate={hasBeenInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 40 }}
+                    transition={{ duration: 0.8, ease: [0.23, 1, 0.320, 1] }}
                     className='max-w-4xl mx-auto text-center space-y-6 sm:space-y-8'
                 >
                     <motion.div
