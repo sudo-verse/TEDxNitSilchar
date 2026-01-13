@@ -30,9 +30,9 @@ export const ThemeSection = () => {
                 <div className='max-w-7xl mx-auto'>
                     {/* Header */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 60 }}
+                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+                        transition={{ duration: 0.8, ease: [0.23, 1, 0.320, 1] }}
                         className='text-center max-w-4xl mx-auto mb-10 sm:mb-12 lg:mb-16'
                     >
                         <div className='space-y-5 sm:space-y-6'>
