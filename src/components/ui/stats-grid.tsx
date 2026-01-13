@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { EventStats } from '@/types/event';
 import { useInView } from '@/hooks/useInView';
 import { cn } from '@/lib/utils';
