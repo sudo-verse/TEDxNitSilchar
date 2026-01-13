@@ -216,9 +216,12 @@ export const TicketsPage = () => {
                             initial={{ opacity: 0, x: 50 }}
                             animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className='bg-gray-900 p-8 rounded-2xl'
+                            className='bg-gray-900 p-8 rounded-2xl space-y-6'
                         >
-                            <h2 className='text-2xl font-bold text-white mb-8'>Purchase Details</h2>
+                            <div>
+                                <h2 className='text-2xl font-bold text-white mb-2'>Join Us at the Auditorium</h2>
+                                <p className='text-gray-400 text-sm'>Fill in your details to reserve your seat</p>
+                            </div>
 
                             {selectedTicketData && (
                                 <div className='bg-gray-800 p-4 rounded-xl mb-6'>
