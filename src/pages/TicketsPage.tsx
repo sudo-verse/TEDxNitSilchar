@@ -366,10 +366,37 @@ export const TicketsPage = () => {
                                 </CTAButton>
 
                                 <p className='text-xs text-gray-400 text-center'>
-                                    By registering, you agree to our terms and conditions. Registration is free for our
-                                    inaugural event.
+                                    By registering, you agree to our terms and conditions. Registration is free for our inaugural event.
                                 </p>
                             </form>
+
+                            {/* Important Notes */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.6, delay: 0.6 }}
+                                className='mt-8 pt-6 border-t border-gray-700 space-y-4'
+                            >
+                                <h3 className='text-lg font-bold text-white'>Important Information</h3>
+                                <div className='space-y-3 text-sm text-gray-300'>
+                                    <div className='flex gap-3'>
+                                        <span className='text-(--color-tedx-red) font-bold text-lg flex-shrink-0'>•</span>
+                                        <p>All attendees are requested to carry a valid ID.</p>
+                                    </div>
+                                    <div className='flex gap-3'>
+                                        <span className='text-(--color-tedx-red) font-bold text-lg flex-shrink-0'>•</span>
+                                        <p>Students must bring a valid student ID card at the venue for verification.</p>
+                                    </div>
+                                    <div className='flex gap-3'>
+                                        <span className='text-(--color-tedx-red) font-bold text-lg flex-shrink-0'>•</span>
+                                        <p>After registration, you'll receive a confirmation email with event details, arrival timing, venue guide, and more.</p>
+                                    </div>
+                                    <div className='flex gap-3'>
+                                        <span className='text-(--color-tedx-red) font-bold text-lg flex-shrink-0'>•</span>
+                                        <p>Don't miss out! Seats are limited, and the experience is unforgettable.</p>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </motion.div>
                     </div>
                 </div>
