@@ -42,18 +42,18 @@ export const HeroSection = () => {
                             >
                                 <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
                                     <motion.span
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
-                                        className='block'
+                                        initial={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
+                                        animate={hasBeenInView ? { opacity: 1, clipPath: 'inset(0 0 0 0)' } : { opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
+                                        transition={{ duration: 0.9, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
+                                        className='block overflow-hidden'
                                     >
                                         {eventDetails.theme.split(' ').slice(0, 2).join(' ')}
                                     </motion.span>
                                     <motion.span
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                                        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-                                        className='block text-[var(--color-tedx-red)]'
+                                        initial={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
+                                        animate={hasBeenInView ? { opacity: 1, clipPath: 'inset(0 0 0 0)' } : { opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
+                                        transition={{ duration: 0.9, delay: 0.6, ease: [0.23, 1, 0.32, 1] }}
+                                        className='block text-[var(--color-tedx-red)] overflow-hidden'
                                     >
                                         {eventDetails.theme.split(' ').slice(2).join(' ')}
                                     </motion.span>
