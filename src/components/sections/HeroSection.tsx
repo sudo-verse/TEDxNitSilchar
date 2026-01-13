@@ -35,12 +35,30 @@ export const HeroSection = () => {
                     >
                         {/* Main Headline */}
                         <div className='space-y-4'>
-                            <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
-                                <span className='block'>{eventDetails.theme.split(' ').slice(0, 2).join(' ')}</span>
-                                <span className='block text-[var(--color-tedx-red)]'>
-                                    {eventDetails.theme.split(' ').slice(2).join(' ')}
-                                </span>
-                            </h1>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={hasBeenInView ? { opacity: 1 } : { opacity: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+                            >
+                                <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
+                                    <motion.span
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+                                        className='block'
+                                    >
+                                        {eventDetails.theme.split(' ').slice(0, 2).join(' ')}
+                                    </motion.span>
+                                    <motion.span
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+                                        className='block text-[var(--color-tedx-red)]'
+                                    >
+                                        {eventDetails.theme.split(' ').slice(2).join(' ')}
+                                    </motion.span>
+                                </h1>
+                            </motion.div>
 
                             <p className='text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
                                 {eventDetails.tagline}
