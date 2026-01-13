@@ -73,26 +73,38 @@ export const Navbar = () => {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className='hidden lg:flex items-center gap-8'>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+                        className='hidden lg:flex items-center gap-8'
+                    >
                         {/* Home link */}
-                        <Link
-                            to='/'
-                            className={cn(
-                                'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
-                                location.pathname === '/'
-                                    ? 'text-[var(--color-tedx-red)]'
-                                    : isScrolled
-                                      ? 'text-muted-foreground'
-                                      : 'text-white'
-                            )}
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
                         >
-                            Home
-                        </Link>
+                            <Link
+                                to='/'
+                                className={cn(
+                                    'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                    location.pathname === '/'
+                                        ? 'text-[var(--color-tedx-red)]'
+                                        : isScrolled
+                                          ? 'text-muted-foreground'
+                                          : 'text-white'
+                                )}
+                            >
+                                Home
+                            </Link>
+                        </motion.div>
 
                         {/* About and Theme sections - only on homepage */}
                         {isHomePage && (
                             <>
-                                <button
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
                                     onClick={() => handleNavClick('about')}
                                     className={cn(
                                         'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
@@ -104,8 +116,10 @@ export const Navbar = () => {
                                     )}
                                 >
                                     About
-                                </button>
-                                <button
+                                </motion.button>
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
                                     onClick={() => handleNavClick('theme')}
                                     className={cn(
                                         'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
@@ -117,39 +131,54 @@ export const Navbar = () => {
                                     )}
                                 >
                                     Theme
-                                </button>
+                                </motion.button>
                             </>
                         )}
 
                         {/* Speakers, Schedule, Partners, Contact, Team */}
                         {mainNavigationItems.slice(1).map(item => (
-                            <Link
+                            <motion.div
                                 key={item.path}
-                                to={item.path}
-                                className={cn(
-                                    'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
-                                    location.pathname === item.path
-                                        ? 'text-[var(--color-tedx-red)]'
-                                        : isScrolled
-                                          ? 'text-muted-foreground'
-                                          : 'text-white'
-                                )}
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ type: 'spring', stiffness: 300 }}
                             >
-                                {item.label}
-                            </Link>
+                                <Link
+                                    to={item.path}
+                                    className={cn(
+                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                        location.pathname === item.path
+                                            ? 'text-[var(--color-tedx-red)]'
+                                            : isScrolled
+                                              ? 'text-muted-foreground'
+                                              : 'text-white'
+                                    )}
+                                >
+                                    {item.label}
+                                </Link>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
 
                     {/* CTA Button */}
-                    <div className='hidden md:flex items-center gap-4'>
-                        <CTAButton
-                            href='#register'
-                            size='sm'
-                            className='shadow-lg'
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+                        className='hidden md:flex items-center gap-4'
+                    >
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                         >
-                            Buy Tickets
-                        </CTAButton>
-                    </div>
+                            <CTAButton
+                                href='#register'
+                                size='sm'
+                                className='shadow-lg'
+                            >
+                                Buy Tickets
+                            </CTAButton>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Mobile Menu Button */}
                     <button
@@ -165,7 +194,13 @@ export const Navbar = () => {
 
                 {/* Mobile Navigation */}
                 {isOpen && (
-                    <div className='lg:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-xl border-t border-white/10 shadow-lg'>
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
+                        className='lg:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-xl border-t border-white/10 shadow-lg'
+                    >
                         <div className='py-2 sm:py-4'>
                             {/* Home link */}
                             <Link
@@ -228,7 +263,7 @@ export const Navbar = () => {
                                 </CTAButton>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 )}
             </div>
         </motion.nav>
