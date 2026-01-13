@@ -106,20 +106,32 @@ export const ThemeSection = () => {
                                 </p>
 
                                 <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center'>
-                                    <CTAButton
-                                        href='#speaker-nomination'
-                                        className='px-8 py-3 text-white font-semibold'
+                                    <motion.div
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                                     >
-                                        Nominate a Speaker
-                                    </CTAButton>
+                                        <CTAButton
+                                            href='#speaker-nomination'
+                                            className='px-8 py-3 text-white font-semibold'
+                                        >
+                                            Nominate a Speaker
+                                        </CTAButton>
+                                    </motion.div>
 
-                                    <CTAButton
-                                        href='#volunteer'
-                                        variant='secondary'
-                                        className='px-8 py-3 border-white/30 text-[var(--color-tedx-red)] hover:bg-[var(--color-tedx-red)] hover:text-white font-semibold'
+                                    <motion.div
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                                     >
-                                        Join Our Team
-                                    </CTAButton>
+                                        <CTAButton
+                                            href='#volunteer'
+                                            variant='secondary'
+                                            className='px-8 py-3 border-white/30 text-[var(--color-tedx-red)] hover:bg-[var(--color-tedx-red)] hover:text-white font-semibold'
+                                        >
+                                            Join Our Team
+                                        </CTAButton>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
