@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, MapPin, Users, ExternalLink } from 'lucide-react';
 import { EventDetails } from '@/types/event';
