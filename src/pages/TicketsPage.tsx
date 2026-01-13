@@ -132,12 +132,11 @@ export const TicketsPage = () => {
                         transition={{ duration: 0.8 }}
                         className='text-center mb-16'
                     >
-                        <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-                            Get Your <span className='text-(--color-tedx-red)'>Tickets</span>
+                        <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+                            Register for TEDx<span className='text-(--color-tedx-red)'>NITSilchar</span> 2026
                         </h1>
-                        <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                            Register for free at TEDxNITSilchar 2026 and be part of our inaugural extraordinary day of
-                            inspiring talks and ideas worth spreading.
+                        <p className='text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+                            Secure your seat for a day of bold ideas, powerful stories, and meaningful connection.
                         </p>
                     </motion.div>
 
