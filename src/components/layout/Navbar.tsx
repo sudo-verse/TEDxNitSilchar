@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Logo } from '@/components/ui/logo';
 import { CTAButton } from '@/components/ui/cta-button';
 import { useScrollSpy } from '@/hooks/useScrollSpy';
