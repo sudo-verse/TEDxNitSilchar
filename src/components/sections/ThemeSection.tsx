@@ -60,18 +60,19 @@ export const ThemeSection = () => {
                     >
                         {themeDescription.pillars.map((pillar, index) => {
                             const IconComponent = iconMap[pillar.icon as keyof typeof iconMap];
+                            const isEven = index % 2 === 0;
 
                             return (
                                 <motion.div
                                     key={pillar.id}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, x: isEven ? -40 : 40, y: 30 }}
+                                    animate={hasBeenInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: isEven ? -40 : 40, y: 30 }}
                                     transition={{
-                                        duration: 0.5,
-                                        delay: 0.2 + index * 0.1,
-                                        ease: 'easeOut'
+                                        duration: 0.6,
+                                        delay: 0.2 + index * 0.12,
+                                        ease: [0.23, 1, 0.320, 1]
                                     }}
-                                    whileHover={{ y: -2 }}
+                                    whileHover={{ y: -8, scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
                                     <ThemeCard
