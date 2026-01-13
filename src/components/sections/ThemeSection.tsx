@@ -89,9 +89,9 @@ export const ThemeSection = () => {
 
                     {/* Call to Action */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                        transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                        animate={hasBeenInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 60, scale: 0.95 }}
+                        transition={{ duration: 0.8, delay: 0.8, ease: [0.23, 1, 0.320, 1] }}
                         className='text-center mt-10 sm:mt-12 lg:mt-16'
                     >
                         <div className='bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg max-w-4xl mx-auto'>
