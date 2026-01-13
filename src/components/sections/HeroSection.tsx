@@ -77,24 +77,41 @@ export const HeroSection = () => {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-0'>
-                            <CTAButton
-                                href='#register'
-                                size='lg'
-                                className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4'
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                            transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
+                            className='flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-0'
+                        >
+                            <motion.div
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.98 }}
+                                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
-                                Buy Tickets
-                            </CTAButton>
+                                <CTAButton
+                                    href='#register'
+                                    size='lg'
+                                    className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4'
+                                >
+                                    Buy Tickets
+                                </CTAButton>
+                            </motion.div>
 
-                            <CTAButton
-                                href='#partner'
-                                variant='secondary'
-                                size='lg'
-                                className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white/30 text-white hover:bg-white hover:text-black'
+                            <motion.div
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.98 }}
+                                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                             >
-                                Become a Partner
-                            </CTAButton>
-                        </div>
+                                <CTAButton
+                                    href='#partner'
+                                    variant='secondary'
+                                    size='lg'
+                                    className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white/30 text-white hover:bg-white hover:text-black'
+                                >
+                                    Become a Partner
+                                </CTAButton>
+                            </motion.div>
+                        </motion.div>
                     </motion.div>
 
                     {/* Right Content - Event Card */}
