@@ -69,9 +69,9 @@ export const PartnersSection = () => {
 
                     {/* Partnership CTA */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                        transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                        animate={hasBeenInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 60, scale: 0.95 }}
+                        transition={{ duration: 0.8, delay: 0.8, ease: [0.23, 1, 0.320, 1] }}
                         className='mt-20'
                     >
                         <div className='bg-gradient-to-r from-gray-800 to-(--color-tedx-red)/10 rounded-2xl p-8 md:p-12 text-center'>
