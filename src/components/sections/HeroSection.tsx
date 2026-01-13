@@ -28,8 +28,8 @@ export const HeroSection = () => {
                 <div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center'>
                     {/* Left Content */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, x: -60 }}
+                        animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         className='space-y-6 sm:space-y-8'
                     >
