@@ -19,19 +19,42 @@ export const StatsGrid = ({ stats }: StatsGridProps) => {
         { label: 'Engaging Sessions', value: stats.sessions, suffix: '+' }
     ];
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30, scale: 0.9 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: { duration: 0.6, ease: [0.23, 1, 0.32, 1] }
+        }
+    };
+
     return (
-        <div
+        <motion.div
             ref={statsRef}
             className='grid grid-cols-2 lg:grid-cols-4 gap-8'
+            variants={containerVariants}
+            initial='hidden'
+            animate={hasBeenInView ? 'visible' : 'hidden'}
         >
-            {statsData.map((stat, index) => (
-                <div
+            {statsData.map((stat) => (
+                <motion.div
                     key={stat.label}
-                    className={cn(
-                        'text-center transition-all duration-700 transform',
-                        hasBeenInView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-                    )}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    className='text-center'
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
                     <div className='space-y-2'>
                         <div className='text-4xl md:text-5xl font-bold text-(--color-tedx-red)'>
@@ -40,8 +63,8 @@ export const StatsGrid = ({ stats }: StatsGridProps) => {
                         </div>
                         <p className='text-gray-300 font-medium'>{stat.label}</p>
                     </div>
-                </div>
+                </motion.div>
             ))}
-        </div>
+        </motion.div>
     );
 };
