@@ -50,12 +50,12 @@ export const PartnersSection = () => {
                         {partnersData.map((tier, index) => (
                             <motion.div
                                 key={tier.name}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60, y: 40 }}
+                                animate={hasBeenInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: index % 2 === 0 ? -60 : 60, y: 40 }}
                                 transition={{
-                                    duration: 0.6,
+                                    duration: 0.7,
                                     delay: 0.4 + index * 0.2,
-                                    ease: 'easeOut'
+                                    ease: [0.23, 1, 0.320, 1]
                                 }}
                             >
                                 <PartnerGrid
