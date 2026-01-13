@@ -31,7 +31,7 @@ export const HeroSection = () => {
                         initial={{ opacity: 0, x: -60 }}
                         animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='space-y-6 sm:space-y-8'
+                        className='space-y-6 sm:space-y-8 pl-4 sm:pl-6 md:pl-8 lg:pl-0'
                     >
                         {/* Main Headline */}
                         <div className='space-y-4'>
