@@ -673,3 +673,239 @@ textarea:focus,
 select:focus {
     transform: scale(1.01);
 }
+
+/* Shimmer Effect for Loading States */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer-loading {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 100%
+    );
+    background-size: 1000px 100%;
+}
+
+/* Pulse Effect for Interactive Elements */
+@keyframes pulse-soft {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.pulse-soft {
+    animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Bounce Animation for Hover Effects */
+@keyframes gentle-bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.hover-bounce:hover {
+    animation: gentle-bounce 0.6s ease-in-out;
+}
+
+/* Glow Effect */
+@keyframes glow-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(235, 0, 40, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(235, 0, 40, 0.6);
+    }
+}
+
+.glow-effect {
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Smooth Underline Animation */
+@keyframes slide-underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.slide-underline {
+    position: relative;
+}
+
+.slide-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    background: var(--color-tedx-red);
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.slide-underline:hover::after {
+    width: 100%;
+}
+
+/* Ripple Effect on Click */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.ripple-effect:active::before {
+    animation: ripple 0.6s ease-out;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Slide and Fade Combination */
+@keyframes slide-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-fade-in {
+    animation: slide-fade-in 0.6s ease-out forwards;
+}
+
+/* Staggered Animation Helper */
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s;
+}
+
+.stagger-5 {
+    animation-delay: 0.5s;
+}
+
+/* Section Reveal Animation */
+@keyframes section-reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.section-reveal {
+    animation: section-reveal 0.8s ease-out forwards;
+}
+
+/* Text Reveal Animation (per word) */
+@keyframes text-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-fade-in {
+    animation: text-fade-in 0.4s ease-out forwards;
+}
+
+/* Smooth Scale Transition for Images */
+.image-scale-smooth {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.image-scale-smooth:hover {
+    transform: scale(1.05);
+}
+
+/* Focus Ring Animation */
+@keyframes focus-ring {
+    0% {
+        box-shadow: 0 0 0 0 rgba(235, 0, 40, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(235, 0, 40, 0);
+    }
+}
+
+.focus-ring:focus {
+    animation: focus-ring 0.6s ease-out;
+}
