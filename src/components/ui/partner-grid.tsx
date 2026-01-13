@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { PartnerTier } from '@/types/partner';
 import { cn } from '@/lib/utils';
 
