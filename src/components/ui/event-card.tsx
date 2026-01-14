@@ -30,7 +30,7 @@ export const EventCard = ({ event }: EventCardProps) => {
             whileHover={{ y: -8, scale: 1.02 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
-            <Card className='bg-white/10 backdrop-blur-md border border-white/20 text-white'>
+            <Card className='bg-white/15 border border-white/20 text-white'>
                 <CardContent className='p-6 space-y-4'>
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
