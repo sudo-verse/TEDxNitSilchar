@@ -24,7 +24,7 @@ export const ThemeSection = () => {
         <section
             id='theme'
             ref={sectionRef}
-            className='py-12 sm:py-16 lg:py-20 bg-black'
+            className='py-12 sm:py-16 lg:py-20'
         >
             <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>
