@@ -133,8 +133,9 @@ export const AboutSection = () => {
                     <div className='mb-12 sm:mb-16 lg:mb-20 px-2'>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
-                            animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.1 }}
                             className='text-center mb-10 sm:mb-16'
                         >
                             <h3 className='text-3xl sm:text-3xl md:text-4xl font-bold text-white mb-4'>What to Expect</h3>
