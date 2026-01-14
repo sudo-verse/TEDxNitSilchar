@@ -983,3 +983,77 @@ select:focus {
 .smooth-reveal {
     animation: smooth-reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
+
+/* Dynamic Background Enhancements */
+@keyframes gradient-drift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes orb-float {
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-40px) translateX(20px);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.4;
+    }
+}
+
+@keyframes ambient-pulse {
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes particle-rise {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px);
+        opacity: 0;
+    }
+}
+
+.dynamic-background-orb {
+    animation: orb-float 15s ease-in-out infinite;
+}
+
+.ambient-glow {
+    animation: ambient-pulse 12s ease-in-out infinite;
+}
+
+.particle-float {
+    animation: particle-rise 10s ease-in infinite;
+}
