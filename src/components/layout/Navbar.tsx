@@ -58,8 +58,8 @@ export const Navbar = () => {
             className={cn(
                 'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
                 isScrolled
-                    ? 'bg-background/80 backdrop-blur-xl shadow-lg border-b border-white/10'
-                    : 'bg-black/10 backdrop-blur-sm'
+                    ? 'bg-black/70 shadow-lg border-b border-white/10'
+                    : 'bg-black/5'
             )}
         >
             <div className='container mx-auto px-4 sm:px-6 lg:px-4'>
