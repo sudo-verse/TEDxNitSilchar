@@ -71,13 +71,13 @@ export const EventCard = ({ event }: EventCardProps) => {
                         </div>
                     </motion.div>
 
-                    <div className='pt-4 space-y-3'>
+                    <div className='pt-5 sm:pt-4 space-y-3 sm:space-y-3'>
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                             <CTAButton
                                 onClick={handleAddToCalendar}
                                 variant='secondary'
                                 size='sm'
-                                className='w-full border-white/30 text-white hover:bg-white hover:text-black'
+                                className='w-full border-white/30 text-white hover:bg-white hover:text-black py-3 sm:py-2 min-h-12 sm:min-h-10'
                             >
                                 <Calendar className='w-4 h-4 mr-2' />
                                 Add to Calendar
@@ -88,7 +88,7 @@ export const EventCard = ({ event }: EventCardProps) => {
                             onClick={() => window.open(event.directionsUrl, '_blank')}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}
-                            className='w-full text-sm text-gray-300 hover:text-white transition-colors flex items-center justify-center gap-2'
+                            className='w-full py-3 text-sm sm:text-sm text-gray-300 hover:text-white transition-colors flex items-center justify-center gap-2 min-h-12 sm:min-h-10'
                         >
                             <ExternalLink className='w-4 h-4' />
                             Get Directions
