@@ -81,17 +81,18 @@ export const HeroSection = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                             transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
-                            className='flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-0'
+                            className='flex flex-col sm:flex-row gap-4 sm:gap-5 pt-4 sm:pt-0'
                         >
                             <motion.div
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                                className='flex-1 sm:flex-none'
                             >
                                 <CTAButton
                                     href='#register'
                                     size='lg'
-                                    className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4'
+                                    className='w-full sm:w-auto text-base sm:text-lg px-8 sm:px-8 py-4 sm:py-4 min-h-14 sm:min-h-12'
                                 >
                                     Buy Tickets
                                 </CTAButton>
@@ -101,12 +102,13 @@ export const HeroSection = () => {
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                                className='flex-1 sm:flex-none'
                             >
                                 <CTAButton
                                     href='#partner'
                                     variant='secondary'
                                     size='lg'
-                                    className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white/30 text-white hover:bg-white hover:text-black'
+                                    className='w-full sm:w-auto text-base sm:text-lg px-8 sm:px-8 py-4 sm:py-4 min-h-14 sm:min-h-12 border-white/30 text-white hover:bg-white hover:text-black'
                                 >
                                     Become a Partner
                                 </CTAButton>
