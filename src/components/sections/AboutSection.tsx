@@ -146,7 +146,8 @@ export const AboutSection = () => {
                             className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6'
                             variants={containerVariants}
                             initial='hidden'
-                            animate={hasBeenInView ? 'visible' : 'hidden'}
+                            whileInView='visible'
+                            viewport={{ once: true, amount: 0.1 }}
                         >
                             {expectationItems.map((item, index) => {
                                 const Icon = item.icon;
