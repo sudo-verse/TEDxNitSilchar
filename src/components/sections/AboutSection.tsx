@@ -152,7 +152,7 @@ export const AboutSection = () => {
                                         variants={itemVariants}
                                         whileHover={{ y: -8, scale: 1.02 }}
                                         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                                        className='bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-700/50 text-center space-y-4'
+                                        className='bg-gray-800/60 rounded-2xl p-6 sm:p-8 border border-gray-700/40 text-center space-y-4'
                                     >
                                         <div className='w-16 h-16 mx-auto bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center'>
                                             <Icon className='w-8 h-8 text-[var(--color-tedx-red)]' />
