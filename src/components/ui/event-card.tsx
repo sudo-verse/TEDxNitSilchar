@@ -36,12 +36,12 @@ export const EventCard = ({ event }: EventCardProps) => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3 }}
-                        className='flex items-center gap-3'
+                        className='flex items-center gap-3 sm:gap-4'
                     >
-                        <Calendar className='w-5 h-5 text-(--color-tedx-red)' />
-                        <div>
-                            <p className='font-semibold'>{event.date}</p>
-                            <p className='text-sm text-gray-300'>{event.time}</p>
+                        <Calendar className='w-6 h-6 sm:w-5 sm:h-5 text-(--color-tedx-red) flex-shrink-0' />
+                        <div className='min-w-0'>
+                            <p className='font-semibold text-sm sm:text-base'>{event.date}</p>
+                            <p className='text-xs sm:text-sm text-gray-300'>{event.time}</p>
                         </div>
                     </motion.div>
 
@@ -49,12 +49,12 @@ export const EventCard = ({ event }: EventCardProps) => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.1 }}
-                        className='flex items-start gap-3'
+                        className='flex items-start gap-3 sm:gap-4'
                     >
-                        <MapPin className='w-5 h-5 text-(--color-tedx-red) mt-0.5' />
-                        <div>
-                            <p className='font-semibold'>{event.venue}</p>
-                            <p className='text-sm text-gray-300'>{event.location}</p>
+                        <MapPin className='w-6 h-6 sm:w-5 sm:h-5 text-(--color-tedx-red) mt-0.5 flex-shrink-0' />
+                        <div className='min-w-0'>
+                            <p className='font-semibold text-sm sm:text-base'>{event.venue}</p>
+                            <p className='text-xs sm:text-sm text-gray-300'>{event.location}</p>
                         </div>
                     </motion.div>
 
@@ -62,12 +62,12 @@ export const EventCard = ({ event }: EventCardProps) => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.2 }}
-                        className='flex items-center gap-3'
+                        className='flex items-center gap-3 sm:gap-4'
                     >
-                        <Users className='w-5 h-5 text-(--color-tedx-red)' />
-                        <div>
-                            <p className='font-semibold'>{event.expectedAttendees}+ Expected Attendees</p>
-                            <p className='text-sm text-gray-300'>Limited seats available</p>
+                        <Users className='w-6 h-6 sm:w-5 sm:h-5 text-(--color-tedx-red) flex-shrink-0' />
+                        <div className='min-w-0'>
+                            <p className='font-semibold text-sm sm:text-base'>{event.expectedAttendees}+ Expected Attendees</p>
+                            <p className='text-xs sm:text-sm text-gray-300'>Limited seats available</p>
                         </div>
                     </motion.div>
 
