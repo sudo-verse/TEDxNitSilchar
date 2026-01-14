@@ -31,7 +31,7 @@ export const EventCard = ({ event }: EventCardProps) => {
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
             <Card className='bg-white/15 border border-white/20 text-white'>
-                <CardContent className='p-6 space-y-4'>
+                <CardContent className='p-4 sm:p-6 space-y-5 sm:space-y-4'>
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
