@@ -56,9 +56,9 @@ export const AboutSection = () => {
         <section
             id='about'
             ref={sectionRef}
-            className='py-12 sm:py-16 lg:py-20 bg-black'
+            className='py-16 sm:py-16 lg:py-20 bg-black'
         >
-            <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
+            <div className='container mx-auto px-4 sm:px-6 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>
                     {/* Main Introduction */}
                     <motion.div
