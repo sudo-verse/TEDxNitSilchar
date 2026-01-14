@@ -188,8 +188,9 @@ export const AboutSection = () => {
                     {/* Closing Message */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+                        viewport={{ once: true, amount: 0.1 }}
                         className='text-center max-w-4xl mx-auto px-2'
                     >
                         <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/20 to-gray-800/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border border-[var(--color-tedx-red)]/30'>
