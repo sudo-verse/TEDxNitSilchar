@@ -152,13 +152,13 @@ export const AboutSection = () => {
                                         variants={itemVariants}
                                         whileHover={{ y: -8, scale: 1.02 }}
                                         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                                        className='bg-gray-800/60 rounded-2xl p-6 sm:p-8 border border-gray-700/40 text-center space-y-4'
+                                        className='bg-gray-800/60 rounded-xl sm:rounded-2xl p-5 sm:p-8 border border-gray-700/40 text-center space-y-3 sm:space-y-4'
                                     >
-                                        <div className='w-16 h-16 mx-auto bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center'>
-                                            <Icon className='w-8 h-8 text-[var(--color-tedx-red)]' />
+                                        <div className='w-14 sm:w-16 h-14 sm:h-16 mx-auto bg-[var(--color-tedx-red)]/20 rounded-full flex items-center justify-center'>
+                                            <Icon className='w-7 sm:w-8 h-7 sm:h-8 text-[var(--color-tedx-red)]' />
                                         </div>
-                                        <h4 className='text-lg sm:text-xl font-bold text-white'>{item.title}</h4>
-                                        <p className='text-sm sm:text-base text-gray-300 leading-relaxed'>{item.description}</p>
+                                        <h4 className='text-base sm:text-lg md:text-xl font-bold text-white'>{item.title}</h4>
+                                        <p className='text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed'>{item.description}</p>
                                     </motion.div>
                                 );
                             })}
