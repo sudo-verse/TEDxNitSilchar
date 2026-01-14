@@ -63,8 +63,9 @@ export const AboutSection = () => {
                     {/* Main Introduction */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
+                        viewport={{ once: true, amount: 0.1 }}
                         className='text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20 px-2'
                     >
                         <h2 className='text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>
