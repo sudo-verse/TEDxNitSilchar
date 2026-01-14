@@ -65,13 +65,13 @@ export const AboutSection = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20'
+                        className='text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20 px-2'
                     >
-                        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>
+                        <h2 className='text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6'>
                             About <span className='text-[var(--color-tedx-red)]'>TEDx</span>NITSilchar
                         </h2>
-                        <div className='w-24 h-1 bg-[var(--color-tedx-red)] mx-auto mb-8' />
-                        <div className='space-y-5 text-gray-300 text-base sm:text-lg leading-relaxed'>
+                        <div className='w-20 sm:w-24 h-1 bg-[var(--color-tedx-red)] mx-auto mb-8' />
+                        <div className='space-y-4 sm:space-y-5 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed'>
                             <p>
                                 An independently organized TED event held at National Institute of Technology Silchar, celebrating visionary thinkers, innovators, and changemakers who bring ideas that matter.
                             </p>
