@@ -30,7 +30,7 @@ const expectationItems = [
 
 export const AboutSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
-    const { hasBeenInView } = useInView(sectionRef, { threshold: 0.3 });
+    const { hasBeenInView } = useInView(sectionRef, { threshold: 0.1 });
 
     const containerVariants = {
         hidden: { opacity: 0 },
