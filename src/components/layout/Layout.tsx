@@ -8,11 +8,11 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
     return (
-        <div className='relative min-h-screen bg-black overflow-hidden'>
+        <div className='relative w-full bg-black'>
             <DynamicBackground />
-            <div className='relative z-10'>
+            <div className='relative z-10 w-full'>
                 <Navbar />
-                <main>{children}</main>
+                <main className='w-full'>{children}</main>
             </div>
         </div>
     );
