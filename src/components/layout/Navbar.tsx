@@ -184,11 +184,12 @@ export const Navbar = () => {
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className={cn(
-                            'lg:hidden p-2 rounded-md transition-colors',
+                            'lg:hidden p-2.5 sm:p-3 rounded-md transition-colors min-w-12 min-h-12 flex items-center justify-center',
                             isScrolled ? 'text-foreground' : 'text-white'
                         )}
+                        aria-label='Toggle navigation menu'
                     >
-                        {isOpen ? <X size={24} /> : <Menu size={24} />}
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
 
