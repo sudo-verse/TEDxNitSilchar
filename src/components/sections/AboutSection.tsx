@@ -173,8 +173,9 @@ export const AboutSection = () => {
                     {/* Stats Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
+                        viewport={{ once: true, amount: 0.1 }}
                         className='bg-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 mb-12 sm:mb-16 mx-2 sm:mx-0'
                     >
                         <div className='text-center mb-8 sm:mb-12'>
