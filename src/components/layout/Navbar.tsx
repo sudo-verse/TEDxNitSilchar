@@ -200,15 +200,15 @@ export const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className='lg:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-xl border-t border-white/10 shadow-lg'
+                        className='lg:hidden absolute top-full left-0 right-0 bg-background/95 border-t border-white/10 shadow-lg'
                     >
-                        <div className='py-2 sm:py-4'>
+                        <div className='py-2 sm:py-3'>
                             {/* Home link */}
                             <Link
                                 to='/'
                                 onClick={() => setIsOpen(false)}
                                 className={cn(
-                                    'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                    'block w-full text-left px-4 sm:px-6 py-3.5 sm:py-4 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors min-h-14 flex items-center',
                                     location.pathname === '/' && 'text-[var(--color-tedx-red)] bg-muted'
                                 )}
                             >
@@ -221,7 +221,7 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => handleNavClick('about')}
                                         className={cn(
-                                            'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                            'block w-full text-left px-4 sm:px-6 py-3.5 sm:py-4 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors min-h-14 flex items-center',
                                             activeSection === 'about' && 'text-[var(--color-tedx-red)] bg-muted'
                                         )}
                                     >
@@ -230,7 +230,7 @@ export const Navbar = () => {
                                     <button
                                         onClick={() => handleNavClick('theme')}
                                         className={cn(
-                                            'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                            'block w-full text-left px-4 sm:px-6 py-3.5 sm:py-4 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors min-h-14 flex items-center',
                                             activeSection === 'theme' && 'text-[var(--color-tedx-red)] bg-muted'
                                         )}
                                     >
@@ -246,7 +246,7 @@ export const Navbar = () => {
                                     to={item.path}
                                     onClick={() => setIsOpen(false)}
                                     className={cn(
-                                        'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                        'block w-full text-left px-4 sm:px-6 py-3.5 sm:py-4 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors min-h-14 flex items-center',
                                         location.pathname === item.path && 'text-[var(--color-tedx-red)] bg-muted'
                                     )}
                                 >
@@ -255,10 +255,10 @@ export const Navbar = () => {
                             ))}
 
                             {/* Mobile CTA Section */}
-                            <div className='px-4 sm:px-6 pt-3 sm:pt-4 border-t border-border'>
+                            <div className='px-4 sm:px-6 py-4 sm:py-5 border-t border-border'>
                                 <CTAButton
                                     href='#register'
-                                    className='w-full py-3 sm:py-4'
+                                    className='w-full py-4 sm:py-4 min-h-14'
                                 >
                                     Buy Tickets
                                 </CTAButton>
