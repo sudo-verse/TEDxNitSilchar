@@ -63,7 +63,7 @@ export const AboutSection = () => {
                     {/* Main Introduction */}
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         className='text-center max-w-4xl mx-auto mb-12 sm:mb-16 lg:mb-20 px-2'
                     >
