@@ -14,15 +14,8 @@ export const HeroSection = () => {
         <section
             id='home'
             ref={sectionRef}
-            className='relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden pt-20 pb-8 md:pt-20 md:pb-0'
+            className='relative min-h-screen flex items-center overflow-hidden pt-20 pb-8 md:pt-20 md:pb-0'
         >
-            {/* Background Pattern */}
-            <div className='absolute inset-0 opacity-10'>
-                <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.15)_1px,_transparent_0)] bg-[length:50px_50px]' />
-            </div>
-
-            {/* Background Video Placeholder */}
-            <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/70' />
 
             <div className='container mx-auto px-6 sm:px-8 md:px-4 relative z-10 pb-16 lg:pb-16'>
                 <div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center'>
