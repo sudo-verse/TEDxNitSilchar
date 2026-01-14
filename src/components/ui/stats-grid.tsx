@@ -56,12 +56,12 @@ export const StatsGrid = ({ stats }: StatsGridProps) => {
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                    <div className='space-y-2'>
-                        <div className='text-4xl md:text-5xl font-bold text-(--color-tedx-red)'>
+                    <div className='space-y-1.5 sm:space-y-2'>
+                        <div className='text-3xl sm:text-4xl md:text-5xl font-bold text-(--color-tedx-red)'>
                             {stat.value}
                             {stat.suffix}
                         </div>
-                        <p className='text-gray-300 font-medium'>{stat.label}</p>
+                        <p className='text-xs sm:text-sm md:text-base text-gray-300 font-medium'>{stat.label}</p>
                     </div>
                 </motion.div>
             ))}
