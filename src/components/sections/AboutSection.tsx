@@ -87,8 +87,9 @@ export const AboutSection = () => {
                         {/* About TEDx */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
-                            animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+                            viewport={{ once: true, amount: 0.1 }}
                             className='space-y-5 sm:space-y-6'
                         >
                             <div>
