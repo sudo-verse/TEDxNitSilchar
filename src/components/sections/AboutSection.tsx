@@ -82,7 +82,7 @@ export const AboutSection = () => {
                     </motion.div>
 
                     {/* About TEDx & NIT Silchar Grid */}
-                    <div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 lg:mb-20'>
+                    <div className='grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 mb-12 sm:mb-16 lg:mb-20 px-2'>
                         {/* About TEDx */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
