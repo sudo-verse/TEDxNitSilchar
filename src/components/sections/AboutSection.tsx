@@ -170,11 +170,11 @@ export const AboutSection = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
-                        className='bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-12 mb-12 sm:mb-16'
+                        className='bg-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 mb-12 sm:mb-16 mx-2 sm:mx-0'
                     >
                         <div className='text-center mb-8 sm:mb-12'>
-                            <h3 className='text-xl sm:text-2xl font-bold text-white mb-2'>Event at a Glance</h3>
-                            <p className='text-sm sm:text-base text-gray-300'>Numbers that showcase our impact</p>
+                            <h3 className='text-2xl sm:text-2xl md:text-2xl font-bold text-white mb-2'>Event at a Glance</h3>
+                            <p className='text-xs sm:text-sm md:text-base text-gray-300'>Numbers that showcase our impact</p>
                         </div>
                         <StatsGrid stats={eventStats} />
                     </motion.div>
@@ -184,13 +184,13 @@ export const AboutSection = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
-                        className='text-center max-w-4xl mx-auto'
+                        className='text-center max-w-4xl mx-auto px-2'
                     >
-                        <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/20 to-gray-800/50 rounded-2xl p-6 sm:p-8 md:p-12 border border-[var(--color-tedx-red)]/30'>
-                            <blockquote className='text-lg sm:text-xl md:text-2xl font-medium text-gray-200 leading-relaxed'>
+                        <div className='bg-gradient-to-r from-[var(--color-tedx-red)]/20 to-gray-800/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 border border-[var(--color-tedx-red)]/30'>
+                            <blockquote className='text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-200 leading-relaxed'>
                                 "We believe in the power of ideas to change attitudes, lives, and ultimately, the world. Join us as we celebrate innovation, courage, and the transformative potential that emerges when brilliant minds come together."
                             </blockquote>
-                            <cite className='block mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 font-medium'>
+                            <cite className='block mt-4 sm:mt-6 text-xs sm:text-sm md:text-base text-gray-300 font-medium'>
                                 — TEDxNITSilchar Organizing Committee
                             </cite>
                         </div>
