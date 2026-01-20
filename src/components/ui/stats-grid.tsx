@@ -48,7 +48,7 @@ export const StatsGrid = ({ stats }: StatsGridProps) => {
             initial='hidden'
             animate={hasBeenInView ? 'visible' : 'hidden'}
         >
-            {statsData.map((stat) => (
+            {statsData.map(stat => (
                 <motion.div
                     key={stat.label}
                     className='text-center'

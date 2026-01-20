@@ -46,17 +46,12 @@ export const Particle3DBackground = () => {
             scene.background = new THREE.Color(0x0f172a);
             sceneRef.current = scene;
 
-            const camera = new THREE.PerspectiveCamera(
-                45,
-                window.innerWidth / window.innerHeight,
-                0.1,
-                2000
-            );
+            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
             camera.position.z = 80;
             cameraRef.current = camera;
 
-            const renderer = new THREE.WebGLRenderer({ 
-                antialias: true, 
+            const renderer = new THREE.WebGLRenderer({
+                antialias: true,
                 alpha: false,
                 powerPreference: 'high-performance'
             });
@@ -67,15 +62,18 @@ export const Particle3DBackground = () => {
             rendererRef.current = renderer;
 
             // Create particles - more particles, better distribution
-            const particleCount = Math.min(200, Math.max(120, Math.floor((window.innerWidth * window.innerHeight) / 5000)));
+            const particleCount = Math.min(
+                200,
+                Math.max(120, Math.floor((window.innerWidth * window.innerHeight) / 5000))
+            );
             const particles: Particle3D[] = [];
 
             for (let i = 0; i < particleCount; i++) {
                 const phi = Math.acos(-1 + (2 * i) / particleCount);
                 const theta = Math.sqrt(particleCount * Math.PI) * phi;
-                
+
                 const radius = 40 + Math.random() * 30;
-                
+
                 particles.push({
                     position: new THREE.Vector3(
                         radius * Math.cos(theta) * Math.sin(phi),
@@ -88,7 +86,7 @@ export const Particle3DBackground = () => {
                         (Math.random() - 0.5) * 0.3
                     ),
                     mass: Math.random() * 0.6 + 0.6,
-                    originalOpacity: Math.random() * 0.4 + 0.6,
+                    originalOpacity: Math.random() * 0.4 + 0.6
                 });
             }
             particlesRef.current = particles;
@@ -121,7 +119,7 @@ export const Particle3DBackground = () => {
                 vertexColors: true,
                 transparent: true,
                 opacity: 0.95,
-                toneMapped: true,
+                toneMapped: true
             });
 
             const points = new THREE.Points(geometry, material);
@@ -141,7 +139,7 @@ export const Particle3DBackground = () => {
                 vertexColors: true,
                 transparent: true,
                 opacity: 0.6,
-                linewidth: 1,
+                linewidth: 1
             });
 
             const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
@@ -161,7 +159,7 @@ export const Particle3DBackground = () => {
                 }
 
                 // Update particles
-                particles.forEach((particle) => {
+                particles.forEach(particle => {
                     // Gentle gravity
                     particle.velocity.y -= 0.02 * particle.mass;
 
@@ -212,8 +210,8 @@ export const Particle3DBackground = () => {
                 posAttr.needsUpdate = true;
 
                 // Update lines
-                const linePositions = (linesRef.current!.geometry.getAttribute('position') as THREE.BufferAttribute);
-                const lineColors = (linesRef.current!.geometry.getAttribute('color') as THREE.BufferAttribute);
+                const linePositions = linesRef.current!.geometry.getAttribute('position') as THREE.BufferAttribute;
+                const lineColors = linesRef.current!.geometry.getAttribute('color') as THREE.BufferAttribute;
                 const linePosArray = linePositions.array as Float32Array;
                 const lineColArray = lineColors.array as Float32Array;
 
@@ -256,8 +254,8 @@ export const Particle3DBackground = () => {
                 (linesRef.current!.geometry as THREE.BufferGeometry).setDrawRange(0, lineIndex * 2);
 
                 // Smooth camera movement
-                cameraTargetRef.current.x = (mouseVectorRef.current.x * 0.3) * 0.1;
-                cameraTargetRef.current.y = (mouseVectorRef.current.y * 0.3) * 0.1;
+                cameraTargetRef.current.x = mouseVectorRef.current.x * 0.3 * 0.1;
+                cameraTargetRef.current.y = mouseVectorRef.current.y * 0.3 * 0.1;
 
                 camera.position.x += (cameraTargetRef.current.x - camera.position.x) * 0.02;
                 camera.position.y += (cameraTargetRef.current.y - camera.position.y) * 0.02;
@@ -312,9 +310,10 @@ export const Particle3DBackground = () => {
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 -z-10 overflow-hidden"
+            className='fixed inset-0 -z-10 overflow-hidden'
             style={{
-                background: 'linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(30, 41, 59, 1) 50%, rgba(15, 23, 42, 1) 100%)',
+                background:
+                    'linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(30, 41, 59, 1) 50%, rgba(15, 23, 42, 1) 100%)'
             }}
         />
     );
