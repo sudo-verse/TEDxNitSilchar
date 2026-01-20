@@ -126,7 +126,8 @@ export const Particle3DBackground = () => {
         const lineMaterial = new THREE.LineBasicMaterial({
             vertexColors: true,
             transparent: true,
-            opacity: 0.3,
+            opacity: 0.5,
+            linewidth: 2,
         });
 
         const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
