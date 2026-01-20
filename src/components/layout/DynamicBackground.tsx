@@ -13,12 +13,12 @@ export const DynamicBackground = () => {
 
             {/* Main animated gradient orbs */}
             <motion.div
-                className="absolute inset-0 opacity-20"
+                className="absolute inset-0 opacity-30"
                 animate={{
                     background: [
-                        'radial-gradient(circle at 20% 50%, rgba(235, 0, 40, 0.1) 0%, transparent 50%)',
-                        'radial-gradient(circle at 80% 50%, rgba(235, 0, 40, 0.1) 0%, transparent 50%)',
-                        'radial-gradient(circle at 20% 50%, rgba(235, 0, 40, 0.1) 0%, transparent 50%)',
+                        'radial-gradient(circle at 20% 50%, rgba(235, 0, 40, 0.08) 0%, transparent 50%)',
+                        'radial-gradient(circle at 80% 50%, rgba(235, 0, 40, 0.08) 0%, transparent 50%)',
+                        'radial-gradient(circle at 20% 50%, rgba(235, 0, 40, 0.08) 0%, transparent 50%)',
                     ],
                 }}
                 transition={{
