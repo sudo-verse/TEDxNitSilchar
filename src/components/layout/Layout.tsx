@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Navbar } from './Navbar';
-import { DynamicBackground } from './DynamicBackground';
+import { ParticleBackground } from './ParticleBackground';
 
 interface LayoutProps {
     children: ReactNode;
