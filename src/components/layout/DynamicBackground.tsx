@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 
 export const DynamicBackground = () => {
     return (
-        <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black" style={{ willChange: 'contents' }}>
+        <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" style={{ willChange: 'contents' }}>
             {/* Dot Pattern Overlay */}
-            <div className='absolute inset-0 opacity-10 pointer-events-none'>
-                <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.15)_1px,_transparent_0)] bg-[length:50px_50px]' />
+            <div className='absolute inset-0 opacity-5 pointer-events-none'>
+                <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.2)_1px,_transparent_0)] bg-[length:50px_50px]' />
             </div>
 
             {/* Gradient Overlay */}
-            <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/70 pointer-events-none' />
+            <div className='absolute inset-0 bg-gradient-to-br from-slate-900/50 via-transparent to-slate-900/50 pointer-events-none' />
 
             {/* Main animated gradient orbs */}
             <motion.div
