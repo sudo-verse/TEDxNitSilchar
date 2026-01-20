@@ -36,7 +36,7 @@ export const Particle3DBackground = () => {
 
     // Initialize Three.js scene and particles
     useEffect(() => {
-        if (!containerRef.current || prefersReducedMotion) return;
+        if (!containerRef.current) return;
 
         // Scene setup
         const scene = new THREE.Scene();
