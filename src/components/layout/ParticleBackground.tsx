@@ -74,8 +74,12 @@ export const ParticleBackground = () => {
 
         // Animation loop
         const animate = () => {
-            // Clear canvas completely
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            // Fill canvas with base background color
+            ctx.fillStyle = 'rgba(15, 23, 42, 1)';
+            ctx.fillRect(0, 0, width, height);
 
             const particles = particlesRef.current;
             const connectionDistance = 150;
