@@ -133,10 +133,11 @@ export const ParticleBackground = () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < connectionDistance) {
-                        const opacity = (1 - distance / connectionDistance) * 0.4;
-                        ctx.strokeStyle = `rgba(230, 43, 30, ${opacity})`;
-                        ctx.lineWidth = 1.2;
+                        const opacity = (1 - distance / connectionDistance) * 0.5;
+                        ctx.strokeStyle = `rgba(239, 68, 68, ${opacity})`;
+                        ctx.lineWidth = 1.3;
                         ctx.lineCap = 'round';
+                        ctx.lineJoin = 'round';
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
