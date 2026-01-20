@@ -62,10 +62,10 @@ export const ParticleBackground = () => {
                 particlesRef.current.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.3,
-                    vy: (Math.random() - 0.5) * 0.3,
-                    radius: Math.random() * 1.5 + 0.5,
-                    opacity: Math.random() * 0.4 + 0.4,
+                    vx: (Math.random() - 0.5) * 0.25,
+                    vy: (Math.random() - 0.5) * 0.25,
+                    radius: Math.random() * 2.2 + 1,
+                    opacity: Math.random() * 0.5 + 0.5,
                 });
             }
         }
