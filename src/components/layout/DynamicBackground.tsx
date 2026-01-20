@@ -79,14 +79,14 @@ export const DynamicBackground = () => {
             {[...Array(2)].map((_, i) => (
                 <motion.div
                     key={`particle-${i}`}
-                    className="absolute w-0.5 h-0.5 bg-red-500/30 rounded-full"
+                    className="absolute w-0.5 h-0.5 bg-red-400/20 rounded-full"
                     initial={{
                         x: Math.random() * 100 + '%',
                         y: Math.random() * 100 + '%',
                     }}
                     animate={{
                         y: [0, -150],
-                        opacity: [0, 0.4, 0],
+                        opacity: [0, 0.3, 0],
                     }}
                     transition={{
                         duration: 14 + i * 3,
