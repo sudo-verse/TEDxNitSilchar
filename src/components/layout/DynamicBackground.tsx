@@ -62,10 +62,10 @@ export const DynamicBackground = () => {
 
             {/* Center glow effect - subtle */}
             <motion.div
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-transparent via-red-600/8 to-transparent blur-2xl"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-transparent via-red-500/5 to-transparent blur-3xl"
                 animate={{
                     scale: [1, 1.1, 1],
-                    opacity: [0.15, 0.25, 0.15],
+                    opacity: [0.2, 0.35, 0.2],
                 }}
                 transition={{
                     duration: 12,
