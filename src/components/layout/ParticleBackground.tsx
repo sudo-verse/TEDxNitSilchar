@@ -119,11 +119,14 @@ export const ParticleBackground = () => {
                 if (particle.y < -10) particle.y = canvas.height + 10;
                 if (particle.y > canvas.height + 10) particle.y = -10;
 
-                // Draw particle
+                // Draw particle with glow
+                ctx.shadowBlur = 4;
+                ctx.shadowColor = `rgba(255, 255, 255, ${particle.opacity * 0.6})`;
                 ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
                 ctx.beginPath();
                 ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
                 ctx.fill();
+                ctx.shadowBlur = 0;
             }
 
             // Draw connecting lines
