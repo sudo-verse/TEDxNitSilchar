@@ -40,7 +40,12 @@ export const Particle3DBackground = () => {
 
         // Scene setup
         const scene = new THREE.Scene();
+        scene.fog = new THREE.Fog(0x0f172a, 200, 400);
         sceneRef.current = scene;
+
+        // Add lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
 
         const camera = new THREE.PerspectiveCamera(
             60,
