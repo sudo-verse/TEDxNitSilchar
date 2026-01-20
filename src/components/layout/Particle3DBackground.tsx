@@ -59,7 +59,7 @@ export const Particle3DBackground = () => {
         rendererRef.current = renderer;
 
         // Create particles
-        const particleCount = Math.min(120, Math.max(80, Math.floor((window.innerWidth * window.innerHeight) / 8000)));
+        const particleCount = Math.min(150, Math.max(100, Math.floor((window.innerWidth * window.innerHeight) / 6000)));
         const particles: Particle3D[] = [];
 
         for (let i = 0; i < particleCount; i++) {
