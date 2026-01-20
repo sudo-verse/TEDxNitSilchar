@@ -51,17 +51,17 @@ export const ParticleBackground = () => {
 
         // Initialize particles
         const initializeParticles = () => {
-            const particleCount = Math.min(80, Math.max(50, Math.floor((canvas.width * canvas.height) / 12000)));
+            const particleCount = Math.min(100, Math.max(60, Math.floor((canvas.width * canvas.height) / 10000)));
             particlesRef.current = [];
 
             for (let i = 0; i < particleCount; i++) {
                 particlesRef.current.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.4,
-                    vy: (Math.random() - 0.5) * 0.4,
-                    radius: Math.random() * 2.5 + 1.2,
-                    opacity: Math.random() * 0.6 + 0.4,
+                    vx: (Math.random() - 0.5) * 0.35,
+                    vy: (Math.random() - 0.5) * 0.35,
+                    radius: Math.random() * 2.8 + 1.3,
+                    opacity: Math.random() * 0.5 + 0.5,
                 });
             }
         };
