@@ -30,11 +30,11 @@ export const DynamicBackground = () => {
 
             {/* Animated floating orbs - left side */}
             <motion.div
-                className="absolute left-0 top-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-red-600/15 to-transparent blur-2xl"
+                className="absolute left-0 top-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-red-500/10 to-transparent blur-3xl"
                 animate={{
                     y: [0, -40, 0],
                     x: [0, 30, 0],
-                    opacity: [0.25, 0.4, 0.25],
+                    opacity: [0.3, 0.5, 0.3],
                 }}
                 transition={{
                     duration: 15,
@@ -46,11 +46,11 @@ export const DynamicBackground = () => {
 
             {/* Animated floating orbs - right side */}
             <motion.div
-                className="absolute right-0 bottom-1/4 w-96 h-96 rounded-full bg-gradient-to-l from-blue-600/15 to-transparent blur-2xl"
+                className="absolute right-0 bottom-1/4 w-96 h-96 rounded-full bg-gradient-to-l from-slate-400/8 to-transparent blur-3xl"
                 animate={{
                     y: [0, 40, 0],
                     x: [0, -30, 0],
-                    opacity: [0.25, 0.4, 0.25],
+                    opacity: [0.3, 0.5, 0.3],
                 }}
                 transition={{
                     duration: 18,
