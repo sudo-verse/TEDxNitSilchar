@@ -99,11 +99,11 @@ export const Particle3DBackground = () => {
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
         const material = new THREE.PointsMaterial({
-            size: 0.8,
+            size: 1.2,
             sizeAttenuation: true,
             vertexColors: true,
             transparent: true,
-            opacity: 0.8,
+            opacity: 1,
         });
 
         const points = new THREE.Points(geometry, material);
