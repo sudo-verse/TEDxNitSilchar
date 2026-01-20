@@ -61,7 +61,7 @@ export const ParticleBackground = () => {
                     vx: (Math.random() - 0.5) * 0.35,
                     vy: (Math.random() - 0.5) * 0.35,
                     radius: Math.random() * 2.8 + 1.3,
-                    opacity: Math.random() * 0.5 + 0.5,
+                    opacity: Math.random() * 0.5 + 0.5
                 });
             }
         };
@@ -160,15 +160,18 @@ export const ParticleBackground = () => {
     }, [isMoving, prefersReducedMotion, mousePosition]);
 
     return (
-        <div ref={containerRef} className="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
+        <div
+            ref={containerRef}
+            className='fixed inset-0 -z-10 overflow-hidden bg-slate-950'
+        >
             {/* Particle canvas */}
             <canvas
                 ref={canvasRef}
-                className="absolute inset-0 block"
+                className='absolute inset-0 block'
             />
 
             {/* TEDx red gradient overlay - subtle */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-black/40 via-red-950/5 to-black/40" />
+            <div className='absolute inset-0 pointer-events-none bg-gradient-to-br from-black/40 via-red-950/5 to-black/40' />
         </div>
     );
 };
