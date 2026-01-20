@@ -15,7 +15,7 @@ export const SchedulePage = () => {
     return (
         <div
             ref={pageRef}
-            className='min-h-screen bg-black pt-20'
+            className='min-h-screen pt-20'
         >
             <main className='py-12'>
                 <div className='container mx-auto px-4'>

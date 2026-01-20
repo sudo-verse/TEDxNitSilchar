@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Logo } from '@/components/ui/logo';
 import { CTAButton } from '@/components/ui/cta-button';
 import { useScrollSpy } from '@/hooks/useScrollSpy';
@@ -30,6 +30,7 @@ export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const isHomePage = location.pathname === '/';
     const activeSection = useScrollSpy(homeNavigationItems.map(item => item.id));
 
@@ -45,6 +46,16 @@ export const Navbar = () => {
     const handleNavClick = (id: string) => {
         if (isHomePage) {
             smoothScrollTo(id);
+        } else {
+            navigate(`/#${id}`);
+            // Small timeout to allow navigation to engage before scrolling if needed
+            // But usually hash navigation works natively or via helper
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
         }
         setIsOpen(false);
     };
@@ -78,44 +89,40 @@ export const Navbar = () => {
                                 location.pathname === '/'
                                     ? 'text-[var(--color-tedx-red)]'
                                     : isScrolled
-                                      ? 'text-muted-foreground'
-                                      : 'text-white'
+                                        ? 'text-muted-foreground'
+                                        : 'text-white'
                             )}
                         >
                             Home
                         </Link>
 
-                        {/* About and Theme sections - only on homepage */}
-                        {isHomePage && (
-                            <>
-                                <button
-                                    onClick={() => handleNavClick('about')}
-                                    className={cn(
-                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
-                                        activeSection === 'about'
-                                            ? 'text-[var(--color-tedx-red)]'
-                                            : isScrolled
-                                              ? 'text-muted-foreground'
-                                              : 'text-white'
-                                    )}
-                                >
-                                    About
-                                </button>
-                                <button
-                                    onClick={() => handleNavClick('theme')}
-                                    className={cn(
-                                        'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
-                                        activeSection === 'theme'
-                                            ? 'text-[var(--color-tedx-red)]'
-                                            : isScrolled
-                                              ? 'text-muted-foreground'
-                                              : 'text-white'
-                                    )}
-                                >
-                                    Theme
-                                </button>
-                            </>
-                        )}
+                        {/* About and Theme sections */}
+                        <button
+                            onClick={() => handleNavClick('about')}
+                            className={cn(
+                                'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                activeSection === 'about'
+                                    ? 'text-[var(--color-tedx-red)]'
+                                    : isScrolled
+                                        ? 'text-muted-foreground'
+                                        : 'text-white'
+                            )}
+                        >
+                            About
+                        </button>
+                        <button
+                            onClick={() => handleNavClick('theme')}
+                            className={cn(
+                                'text-sm font-medium transition-colors duration-200 hover:text-[var(--color-tedx-red)]',
+                                activeSection === 'theme'
+                                    ? 'text-[var(--color-tedx-red)]'
+                                    : isScrolled
+                                        ? 'text-muted-foreground'
+                                        : 'text-white'
+                            )}
+                        >
+                            Theme
+                        </button>
 
                         {/* Speakers, Schedule, Partners, Contact, Team */}
                         {mainNavigationItems.slice(1).map(item => (
@@ -127,8 +134,8 @@ export const Navbar = () => {
                                     location.pathname === item.path
                                         ? 'text-[var(--color-tedx-red)]'
                                         : isScrolled
-                                          ? 'text-muted-foreground'
-                                          : 'text-white'
+                                            ? 'text-muted-foreground'
+                                            : 'text-white'
                                 )}
                             >
                                 {item.label}
@@ -175,29 +182,25 @@ export const Navbar = () => {
                                 Home
                             </Link>
 
-                            {/* About and Theme sections - only on homepage */}
-                            {isHomePage && (
-                                <>
-                                    <button
-                                        onClick={() => handleNavClick('about')}
-                                        className={cn(
-                                            'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
-                                            activeSection === 'about' && 'text-[var(--color-tedx-red)] bg-muted'
-                                        )}
-                                    >
-                                        About
-                                    </button>
-                                    <button
-                                        onClick={() => handleNavClick('theme')}
-                                        className={cn(
-                                            'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
-                                            activeSection === 'theme' && 'text-[var(--color-tedx-red)] bg-muted'
-                                        )}
-                                    >
-                                        Theme
-                                    </button>
-                                </>
-                            )}
+                            {/* About and Theme sections */}
+                            <button
+                                onClick={() => handleNavClick('about')}
+                                className={cn(
+                                    'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                    activeSection === 'about' && 'text-[var(--color-tedx-red)] bg-muted'
+                                )}
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => handleNavClick('theme')}
+                                className={cn(
+                                    'block w-full text-left px-4 sm:px-6 py-2.5 sm:py-3 text-foreground hover:bg-muted hover:text-[var(--color-tedx-red)] transition-colors',
+                                    activeSection === 'theme' && 'text-[var(--color-tedx-red)] bg-muted'
+                                )}
+                            >
+                                Theme
+                            </button>
 
                             {/* Speakers, Schedule, Partners, Contact, Team */}
                             {mainNavigationItems.slice(1).map(item => (

@@ -118,7 +118,7 @@ export const VolunteerPage = () => {
     };
 
     return (
-        <main className='min-h-screen bg-black pt-20'>
+        <main className='min-h-screen pt-20'>
             <section
                 ref={sectionRef}
                 className='py-16'
@@ -195,18 +195,16 @@ export const VolunteerPage = () => {
                                         <motion.div
                                             key={role.id}
                                             whileHover={{ scale: 1.02 }}
-                                            className={`p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
-                                                isSelected
+                                            className={`p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${isSelected
                                                     ? 'border-(--color-tedx-red) bg-(--color-tedx-red)/10'
                                                     : 'border-gray-700 bg-gray-900 hover:border-gray-600'
-                                            }`}
+                                                }`}
                                             onClick={() => handleRoleToggle(role.id)}
                                         >
                                             <div className='flex items-start gap-4'>
                                                 <div
-                                                    className={`p-3 rounded-full ${
-                                                        isSelected ? 'bg-(--color-tedx-red)' : 'bg-gray-700'
-                                                    }`}
+                                                    className={`p-3 rounded-full ${isSelected ? 'bg-(--color-tedx-red)' : 'bg-gray-700'
+                                                        }`}
                                                 >
                                                     <IconComponent className='w-6 h-6 text-white' />
                                                 </div>

@@ -108,7 +108,7 @@ export const SpeakerNominationPage = () => {
     };
 
     return (
-        <main className='min-h-screen bg-black pt-20'>
+        <main className='min-h-screen pt-20'>
             <section
                 ref={sectionRef}
                 className='py-16'

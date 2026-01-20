@@ -50,7 +50,7 @@ export const TeamPage = () => {
     return (
         <div
             ref={pageRef}
-            className='min-h-screen bg-black text-white'
+            className='min-h-screen text-white'
         >
             {/* Hero Section */}
             <section className='relative overflow-hidden pt-24 pb-16'>
@@ -142,11 +142,10 @@ export const TeamPage = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => setSelectedDepartment(dept.id)}
-                                className={`px-6 py-3 rounded-full transition-all duration-300 border ${
-                                    selectedDepartment === dept.id
+                                className={`px-6 py-3 rounded-full transition-all duration-300 border ${selectedDepartment === dept.id
                                         ? 'bg-red-600 border-red-600 text-white shadow-lg shadow-red-600/25'
                                         : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20'
-                                }`}
+                                    }`}
                             >
                                 <span className='font-medium'>{dept.name}</span>
                                 <span className='ml-2 text-sm opacity-75'>({dept.count})</span>
@@ -224,9 +223,8 @@ const TeamMemberCard = ({ member, index, isVisible }: TeamMemberCardProps) => {
                         <img
                             src={member.image}
                             alt={member.name}
-                            className={`w-full h-full object-cover transition-all duration-500 ${
-                                imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-                            }`}
+                            className={`w-full h-full object-cover transition-all duration-500 ${imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+                                }`}
                             onLoad={() => setImageLoaded(true)}
                         />
                     </div>

@@ -163,7 +163,7 @@ export const PartnershipPage = () => {
     };
 
     return (
-        <main className='min-h-screen bg-black pt-20'>
+        <main className='min-h-screen pt-20'>
             <section
                 ref={sectionRef}
                 className='py-16'
@@ -232,11 +232,10 @@ export const PartnershipPage = () => {
                                     animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                                     transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                                     whileHover={{ scale: 1.05 }}
-                                    className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 ${
-                                        selectedTier === tier.id
+                                    className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 ${selectedTier === tier.id
                                             ? 'ring-2 ring-(--color-tedx-red) bg-gray-800'
                                             : 'bg-gray-900 hover:bg-gray-800'
-                                    } ${tier.popular ? 'border-2 border-(--color-tedx-red)/50' : ''}`}
+                                        } ${tier.popular ? 'border-2 border-(--color-tedx-red)/50' : ''}`}
                                     onClick={() => setSelectedTier(tier.id)}
                                 >
                                     {tier.popular && (

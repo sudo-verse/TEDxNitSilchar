@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <section
             id='home'
             ref={sectionRef}
-            className='relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden pt-20 pb-8 md:pt-20 md:pb-0'
+            className='relative min-h-screen flex items-center overflow-hidden pt-20 pb-8 md:pt-20 md:pb-0'
         >
             {/* Background Pattern */}
             <div className='absolute inset-0 opacity-10'>

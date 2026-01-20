@@ -52,7 +52,7 @@ export const SpeakersPage = () => {
     const orbitingSpeakers = speakers.filter((_, index) => index !== activeSpeakerIndex);
 
     return (
-        <div className='min-h-screen bg-black'>
+        <div className='min-h-screen'>
             {/* Header with back button */}
             <div className='container mx-auto px-4 pt-8'>
                 <motion.div
@@ -73,7 +73,7 @@ export const SpeakersPage = () => {
             {/* Main content */}
             <section
                 ref={sectionRef}
-                className='py-12 bg-black'
+                className='py-12'
             >
                 <div className='container mx-auto px-4'>
                     <div className='max-w-7xl mx-auto'>
