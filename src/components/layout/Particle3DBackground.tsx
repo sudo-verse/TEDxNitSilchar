@@ -277,14 +277,16 @@ export const Particle3DBackground = () => {
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);
             }
-            containerRef.current?.removeChild(renderer.domElement);
+            if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
+                containerRef.current.removeChild(renderer.domElement);
+            }
             geometry.dispose();
             lineGeometry.dispose();
             material.dispose();
             lineMaterial.dispose();
             renderer.dispose();
         };
-    }, [prefersReducedMotion]);
+    }, []);
 
     // Update animation based on mouse position
     useEffect(() => {
