@@ -12,11 +12,13 @@ interface Particle {
 
 export const ParticleBackground = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const { mousePosition, isMoving } = useMousePosition();
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
     const particlesRef = useRef<Particle[]>([]);
     const animationFrameRef = useRef<number>();
     const mouseInfluenceRef = useRef({ x: 0, y: 0 });
+    const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
 
     // Check for prefers-reduced-motion
     useEffect(() => {
@@ -36,10 +38,12 @@ export const ParticleBackground = () => {
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d', { alpha: true });
         if (!ctx) return;
 
-        // Set canvas size
+        ctxRef.current = ctx;
+
+        // Set canvas size to match window
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -61,16 +65,15 @@ export const ParticleBackground = () => {
                     vx: (Math.random() - 0.5) * 0.3,
                     vy: (Math.random() - 0.5) * 0.3,
                     radius: Math.random() * 1.5 + 0.5,
-                    opacity: Math.random() * 0.5 + 0.3,
+                    opacity: Math.random() * 0.4 + 0.4,
                 });
             }
         }
 
         // Animation loop
         const animate = () => {
-            // Clear canvas with semi-transparent background
-            ctx.fillStyle = 'rgba(15, 23, 42, 0.1)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // Clear canvas completely
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             const particles = particlesRef.current;
             const connectionDistance = 150;
@@ -131,9 +134,9 @@ export const ParticleBackground = () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < connectionDistance) {
-                        const opacity = (1 - distance / connectionDistance) * 0.15;
+                        const opacity = (1 - distance / connectionDistance) * 0.2;
                         ctx.strokeStyle = `rgba(230, 43, 30, ${opacity})`;
-                        ctx.lineWidth = 0.5;
+                        ctx.lineWidth = 0.8;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
@@ -153,15 +156,26 @@ export const ParticleBackground = () => {
                 cancelAnimationFrame(animationFrameRef.current);
             }
         };
-    }, [mousePosition, isMoving, prefersReducedMotion]);
+    }, [isMoving, prefersReducedMotion, mousePosition]);
 
     return (
-        <canvas
-            ref={canvasRef}
-            className="fixed inset-0 -z-10"
-            style={{
-                background: 'linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(30, 41, 59, 1) 50%, rgba(15, 23, 42, 1) 100%)',
-            }}
-        />
+        <div ref={containerRef} className="fixed inset-0 -z-10 overflow-hidden">
+            {/* Base background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
+
+            {/* Particle canvas */}
+            <canvas
+                ref={canvasRef}
+                className="absolute inset-0"
+                style={{
+                    display: 'block',
+                }}
+            />
+
+            {/* TEDx red gradient overlay - subtle */}
+            <div className="absolute inset-0 pointer-events-none" style={{
+                background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(230, 43, 30, 0.08) 50%, rgba(0, 0, 0, 0.3) 100%)',
+            }} />
+        </div>
     );
 };
