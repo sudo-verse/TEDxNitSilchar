@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 
 interface LogoProps {
     className?: string;
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'navbar' | 'sm' | 'md' | 'lg';
 }
 
 export const Logo = ({ className, size = 'lg' }: LogoProps) => {
     const sizeClasses = {
-        sm: 'h-32 md:h-48',
+        navbar: 'h-40 md:h-64',
+        sm: 'h-24 md:h-48',
         md: 'h-48 md:h-56',
         lg: 'h-48 md:h-56'
     };

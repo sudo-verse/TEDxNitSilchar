@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { CTAButton } from '@/components/ui/cta-button';
+import { CountdownTimer } from '@/components/ui/CountdownTimer';
 import { eventDetails } from '@/data/event';
 import { useInView } from '@/hooks/useInView';
 
@@ -33,7 +35,7 @@ export const HeroSection = () => {
         <section
             id='home'
             ref={sectionRef}
-            className='relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20 pb-20'
+            className='relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-24 pb-12 sm:pt-32 sm:pb-20'
         >
             {/* Background Image & Overlays */}
             <div className="absolute inset-0 z-0">
@@ -68,7 +70,7 @@ export const HeroSection = () => {
                 >
                     {/* Main Headline - Theme */}
                     <div className='space-y-4'>
-                        <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-[family-name:var(--font-serif)] font-normal text-white leading-tight tracking-tight overflow-hidden'>
+                        <h1 className='text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-[family-name:var(--font-serif)] font-normal text-white leading-tight tracking-tight overflow-hidden'>
                             <span className="sr-only">{eventDetails.theme}</span>
                             <motion.span
                                 initial="hidden"
@@ -127,6 +129,9 @@ export const HeroSection = () => {
                         {eventDetails.tagline}
                     </motion.p>
 
+                    {/* Countdown Timer */}
+                    <CountdownTimer targetDate="2026-02-08T09:00:00" />
+
                     {/* Date and Location Chip */}
                     <div className='inline-flex items-center gap-2 border border-white/20 rounded-full px-6 py-2 bg-white/5 backdrop-blur-sm'>
                         <span className='text-sm text-white/80 font-[family-name:var(--font-body-serif)]'>
@@ -146,6 +151,18 @@ export const HeroSection = () => {
                     </div>
                 </motion.div>
             </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2, duration: 1 }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+            >
+                <div className="animate-bounce text-white/50">
+                    <ChevronDown size={32} />
+                </div>
+            </motion.div>
         </section>
     );
 };

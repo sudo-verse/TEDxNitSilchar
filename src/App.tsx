@@ -33,7 +33,7 @@ export const App = () => {
         // Simulate initial loading time
         const loadingTimer = setTimeout(() => {
             setIsInitialLoading(false);
-        }, 1200);
+        }, 500);
 
         return () => clearTimeout(loadingTimer);
     }, []);

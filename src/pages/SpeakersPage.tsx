@@ -60,13 +60,7 @@ export const SpeakersPage = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Link
-                        to='/'
-                        className='inline-flex items-center gap-2 text-gray-400 hover:text-(--color-tedx-red) transition-colors mb-8'
-                    >
-                        <ArrowLeft className='w-4 h-4' />
-                        Back to Home
-                    </Link>
+
                 </motion.div>
             </div>
 
