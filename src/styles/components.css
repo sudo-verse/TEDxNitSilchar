@@ -1,0 +1,10 @@
+/* Decrypted Text Effect */
+.revealed {
+    position: relative;
+    display: inline-block;
+}
+
+.encrypted {
+    opacity: 0.7;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}

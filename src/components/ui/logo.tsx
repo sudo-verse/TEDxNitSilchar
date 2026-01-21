@@ -7,18 +7,18 @@ interface LogoProps {
 
 export const Logo = ({ className, size = 'lg' }: LogoProps) => {
     const sizeClasses = {
-        sm: 'h-24 md:h-32',
-        md: 'h-32 md:h-48',
+        sm: 'h-32 md:h-48',
+        md: 'h-48 md:h-56',
         lg: 'h-48 md:h-56'
     };
 
     return (
-        <Link to="/" className={className}>
+        <div className={className}>
             <img
                 src="/tedxlogo.png"
                 alt="TEDx NIT Silchar"
                 className={`${sizeClasses[size]} w-auto object-contain`}
             />
-        </Link>
+        </div>
     );
 };

@@ -1,116 +1,149 @@
-import { useRef } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CTAButton } from '@/components/ui/cta-button';
-import { EventCard } from '@/components/ui/event-card';
 import { eventDetails } from '@/data/event';
 import { useInView } from '@/hooks/useInView';
 
 export const HeroSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const { hasBeenInView } = useInView(sectionRef, { threshold: 0.3 });
+    const [typingState, setTypingState] = useState("hidden");
+
+    useEffect(() => {
+        if (hasBeenInView) {
+            let timeoutId: NodeJS.Timeout;
+
+            const runLoop = () => {
+                setTypingState("visible");
+                // Wait for typing (Approx 2s) + Hold (3s) = 5s
+                timeoutId = setTimeout(() => {
+                    setTypingState("hidden");
+                    // Wait for fade out (0.5s) before restarting
+                    timeoutId = setTimeout(runLoop, 500);
+                }, 5000);
+            };
+
+            runLoop();
+
+            return () => clearTimeout(timeoutId);
+        }
+    }, [hasBeenInView]);
 
     return (
         <section
             id='home'
             ref={sectionRef}
-            className='relative min-h-screen flex items-center overflow-hidden pt-20 pb-8 md:pt-20 md:pb-0'
+            className='relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20 pb-20'
         >
-            {/* Background Pattern */}
-            <div className='absolute inset-0 opacity-10'>
-                <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.15)_1px,_transparent_0)] bg-[length:50px_50px]' />
+            {/* Background Image & Overlays */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/campus.jpg"
+                    alt="NIT Silchar Campus"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{
+                        filter: 'brightness(0.85) contrast(1.15) saturate(0.7) sepia(0.1)',
+                    }}
+                />
+
+                {/* Red-tinted Dark Overlay - warmer, less blue */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0a0505]/75 via-black/70 to-[#080505]/75" />
+
+                {/* Gradient fade to background at bottom - seamless blend */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-50% to-black" />
+
+                {/* Extra solid cover at very bottom for seamless transition */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black to-transparent" />
             </div>
 
-            {/* Background Video Placeholder */}
-            <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/70' />
+            {/* Content Overlay */}
+            <div className='absolute inset-0 bg-black/20 z-0 pointer-events-none' />
 
-            <div className='container mx-auto px-6 sm:px-8 md:px-4 relative z-10 pb-16 lg:pb-16'>
-                <div className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center'>
-                    {/* Left Content */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='space-y-6 sm:space-y-8'
-                    >
-                        {/* Main Headline */}
-                        <div className='space-y-4'>
-                            <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight'>
-                                <span className='block'>{eventDetails.theme.split(' ').slice(0, 2).join(' ')}</span>
-                                <span className='block text-[var(--color-tedx-red)]'>
-                                    {eventDetails.theme.split(' ').slice(2).join(' ')}
-                                </span>
-                            </h1>
-
-                            <p className='text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
-                                {eventDetails.tagline}
-                            </p>
-
-                            <div className='space-y-4 sm:space-y-3'>
-                                <div className='inline-block bg-[var(--color-tedx-red)]/20 border border-[var(--color-tedx-red)]/30 rounded-full px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-[var(--color-tedx-red)] mb-3 sm:mb-2'>
-                                    🎉 INAUGURAL EVENT • FIRST TIME IN NIT SILCHAR
-                                </div>
-                                <p className='text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl'>
-                                    Join us for an extraordinary day of inspiring talks, innovative ideas, and
-                                    meaningful connections as we make history with the very first TEDx event at National
-                                    Institute of Technology Silchar.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* CTA Buttons */}
-                        <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-0'>
-                            <CTAButton
-                                href='#register'
-                                size='lg'
-                                className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4'
-                            >
-                                Buy Tickets
-                            </CTAButton>
-
-                            <CTAButton
-                                href='#partner'
-                                variant='secondary'
-                                size='lg'
-                                className='text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 border-white/30 text-white hover:bg-white hover:text-black'
-                            >
-                                Become a Partner
-                            </CTAButton>
-                        </div>
-                    </motion.div>
-
-                    {/* Right Content - Event Card */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={hasBeenInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                        transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-                        className='flex justify-center lg:justify-end mt-8 lg:mt-0'
-                    >
-                        <div className='w-full max-w-xs sm:max-w-sm'>
-                            <EventCard event={eventDetails} />
-                        </div>
-                    </motion.div>
-                </div>
-
-                {/* Scroll Indicator */}
+            <div className='container mx-auto px-4 relative z-10 text-center'>
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className='absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:flex'
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={hasBeenInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 1, ease: 'easeOut' }}
+                    className='space-y-8 flex flex-col items-center'
                 >
-                    <button
-                        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                        className='flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors group'
+                    {/* Main Headline - Theme */}
+                    <div className='space-y-4'>
+                        <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-[family-name:var(--font-serif)] font-normal text-white leading-tight tracking-tight overflow-hidden'>
+                            <span className="sr-only">{eventDetails.theme}</span>
+                            <motion.span
+                                initial="hidden"
+                                animate={typingState}
+                                aria-hidden
+                            >
+                                {eventDetails.theme.split(' ').map((word, wordIndex) => {
+                                    // Calculate the starting index for this word's characters based on previous words
+                                    const previousCharsCount = eventDetails.theme
+                                        .split(' ')
+                                        .slice(0, wordIndex)
+                                        .reduce((acc, w) => acc + w.length + 1, 0); // +1 for space
+
+                                    return (
+                                        <span key={wordIndex} className="inline-block whitespace-nowrap">
+                                            {word.split('').map((char, charIndex) => (
+                                                <motion.span
+                                                    key={`${wordIndex}-${charIndex}`}
+                                                    custom={previousCharsCount + charIndex}
+                                                    variants={{
+                                                        hidden: {
+                                                            opacity: 0,
+                                                            y: 20,
+                                                            transition: { duration: 0.3 }
+                                                        },
+                                                        visible: (i) => ({
+                                                            opacity: 1,
+                                                            y: 0,
+                                                            transition: {
+                                                                delay: 0.2 + (i * 0.05),
+                                                                duration: 0.4,
+                                                                ease: "easeOut"
+                                                            }
+                                                        }),
+                                                    }}
+                                                    className="inline-block"
+                                                >
+                                                    {char}
+                                                </motion.span>
+                                            ))}
+                                            <span className="inline-block">&nbsp;</span>
+                                        </span>
+                                    );
+                                })}
+                            </motion.span>
+                        </h1>
+                    </div>
+
+                    {/* Tagline / Subtitle */}
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={hasBeenInView ? { opacity: 1 } : { opacity: 0 }}
+                        transition={{ duration: 1, delay: 1.5 }}
+                        className='text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-[family-name:var(--font-body-serif)] leading-relaxed'
                     >
-                        <span className='text-sm font-medium'>Discover More</span>
-                        <motion.div
-                            animate={{ y: [0, 5, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                        {eventDetails.tagline}
+                    </motion.p>
+
+                    {/* Date and Location Chip */}
+                    <div className='inline-flex items-center gap-2 border border-white/20 rounded-full px-6 py-2 bg-white/5 backdrop-blur-sm'>
+                        <span className='text-sm text-white/80 font-[family-name:var(--font-body-serif)]'>
+                            {eventDetails.date} • {eventDetails.location.split(',')[0]}
+                        </span>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className='pt-8'>
+                        <CTAButton
+                            href='#register'
+                            size='lg'
+                            className='bg-transparent border border-white/40 hover:bg-white hover:text-black hover:border-white text-white rounded-none px-10 py-4 text-sm tracking-widest uppercase transition-all duration-300 font-[family-name:var(--font-body-serif)]'
                         >
-                            <ArrowDown className='w-5 h-5 group-hover:animate-none' />
-                        </motion.div>
-                    </button>
+                            Book your Tickets
+                        </CTAButton>
+                    </div>
                 </motion.div>
             </div>
         </section>

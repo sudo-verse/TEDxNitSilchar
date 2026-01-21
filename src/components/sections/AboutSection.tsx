@@ -4,13 +4,13 @@ import { useInView } from '@/hooks/useInView';
 
 export const AboutSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
-    const { hasBeenInView } = useInView(sectionRef, { threshold: 0.3 });
+    const { hasBeenInView } = useInView(sectionRef, { threshold: 0.2 });
 
     return (
         <section
             id='about'
             ref={sectionRef}
-            className='py-12 sm:py-16 lg:py-20'
+            className='min-h-screen py-12 sm:py-16 lg:py-20 flex flex-col justify-center'
         >
             <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>

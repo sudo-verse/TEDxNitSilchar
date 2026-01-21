@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer
             id='contact'
-            className='bg-black text-white py-12 sm:py-14 lg:py-16'
+            className='bg-black text-white py-12 sm:py-14 lg:py-16 font-[family-name:var(--font-body-serif)]'
         >
             <div className='container mx-auto px-6 sm:px-8 lg:px-4'>
                 <div className='max-w-7xl mx-auto'>
